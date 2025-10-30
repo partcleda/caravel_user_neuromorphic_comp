@@ -17,6 +17,5 @@
 # yaml file contain general design information that would mostly need to be updated in the first run only 
 includes: 
     - ram_word/ram_word.yaml
-    - ram1k_smoke_test/ram1k_smoke_test.yaml
 
 

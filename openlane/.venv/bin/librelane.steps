@@ -1,4 +1,4 @@
-#!/home/vboxuser/caravel_user_sram/openlane/.venv/bin/python3
+#!/home/marcus/caravel_user_neuromorphic_comp/openlane/.venv/bin/python3
 import sys
 from librelane.steps.__main__ import cli
 if __name__ == '__main__':

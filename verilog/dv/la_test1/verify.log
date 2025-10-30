@@ -1,0 +1,4 @@
+make[1]: Entering directory '/home/marcus/caravel_user_neuromorphic_comp/verilog/dv/la_test1'
+Makefile:30: /verilog/dv/make/sim.makefile: No such file or directory
+make[1]: *** No rule to make target '/verilog/dv/make/sim.makefile'.  Stop.
+make[1]: Leaving directory '/home/marcus/caravel_user_neuromorphic_comp/verilog/dv/la_test1'

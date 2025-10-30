@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>test_functions &mdash; caravel_cocotb alpha documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            caravel_cocotb
+          </a>
+              <div class="version">
+                1.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_api.html">Python APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C_api.html">Firmware APIs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">caravel_cocotb</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">test_functions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for test_functions</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">cocotb</span>
+<span class="kn">import</span> <span class="nn">cocotb.log</span>
+<span class="kn">import</span> <span class="nn">interfaces.caravel</span> <span class="k">as</span> <span class="nn">caravel</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">cocotb.log</span> <span class="kn">import</span> <span class="n">SimTimeContextFilter</span>
+<span class="kn">from</span> <span class="nn">cocotb.log</span> <span class="kn">import</span> <span class="n">SimLogFormatter</span>
+<span class="kn">from</span> <span class="nn">tests.common_functions.Timeout</span> <span class="kn">import</span> <span class="n">Timeout</span>
+<span class="kn">from</span> <span class="nn">cocotb.triggers</span> <span class="kn">import</span> <span class="n">ClockCycles</span>
+<span class="kn">import</span> <span class="nn">yaml</span>
+<span class="kn">from</span> <span class="nn">cocotb_coverage.coverage</span> <span class="kn">import</span> <span class="n">coverage_db</span>
+
+
+<span class="sd">&quot;&quot;&quot;configure the test log file location and log verbosity</span>
+<span class="sd">   configure the test clock</span>
+<span class="sd">   configure the test timeout</span>
+<span class="sd">   configure whitbox models</span>
+<span class="sd">   start up the test connecting power vdd to the design then reset and disable the CSB bit</span>
+<span class="sd">   return the caravel environmnet with clock and start up</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">read_config_file</span><span class="p">():</span>
+    <span class="n">config_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cocotb</span><span class="o">.</span><span class="n">plusargs</span><span class="p">[</span><span class="s1">&#39;SIM_DIR&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/configs.yaml&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="c1"># The FullLoader parameter handles the conversion from YAML</span>
+        <span class="c1"># scalar values to Python the dictionary format</span>
+        <span class="n">configs</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">FullLoader</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="n">configs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">configs</span>
+
+
+<span class="n">CLOCK_GLOBAL</span> <span class="o">=</span> <span class="mi">25</span>
+
+
+<div class="viewcode-block" id="test_configure"><a class="viewcode-back" href="../python_api.html#test_functions.test_configure">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">test_configure</span><span class="p">(</span><span class="n">dut</span><span class="p">:</span><span class="n">cocotb</span><span class="o">.</span><span class="n">handle</span><span class="o">.</span><span class="n">SimHandle</span><span class="p">,</span><span class="n">timeout_cycles</span><span class="o">=</span><span class="mi">1000000</span><span class="p">,</span><span class="n">clk</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span><span class="n">timeout_precision</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span><span class="n">num_error</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">-&gt;</span> <span class="n">caravel</span><span class="o">.</span><span class="n">Caravel_env</span><span class="p">:</span>
+<span class="c1"># async def test_configure(</span>
+<span class="c1">#     dut: cocotb.handle.SimHandle,</span>
+<span class="c1">#     timeout_cycles=1000000,</span>
+<span class="c1">#     clk=read_config_file()[&#39;clock&#39;],</span>
+<span class="c1">#     timeout_precision=0.2,</span>
+<span class="c1">#     num_error=int(read_config_file()[&#39;max_err&#39;]),</span>
+<span class="c1"># ) -&gt; caravel.Caravel_env:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Configure caravel power, clock, and reset and setup the timeout watchdog then return object of caravel environment.</span>
+
+<span class="sd">    :param SimHandle dut: dut handle</span>
+<span class="sd">    :param int timeout_cycles: Number of cycles before reporting timeout and exit the test default = 1000000 cycles</span>
+<span class="sd">    :param int clk: The clock period to be used in the design in ``&#39;ns&#39;`` default 12.5 ``&#39;ns&#39;``</span>
+<span class="sd">    :param int timeout_precision: Precision of logging how many cycle left until the timeout default is 0.2 meaning if time is 100 cycle every 20 cycles there would be a warning message for timeout</span>
+<span class="sd">    :param int num_error: Maximum number of errors reported before terminate the test</span>
+<span class="sd">    :return: Object of type Caravel_env (caravel environment)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">caravelEnv</span> <span class="o">=</span> <span class="n">caravel</span><span class="o">.</span><span class="n">Caravel_env</span><span class="p">(</span><span class="n">dut</span><span class="p">)</span>
+    <span class="n">Timeout</span><span class="p">(</span><span class="n">caravelEnv</span><span class="o">.</span><span class="n">clk</span><span class="p">,</span> <span class="n">timeout_cycles</span><span class="p">,</span> <span class="n">timeout_precision</span><span class="p">)</span>
+    <span class="n">cocotb</span><span class="o">.</span><span class="n">scheduler</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">max_num_error</span><span class="p">(</span><span class="n">num_error</span><span class="p">,</span> <span class="n">caravelEnv</span><span class="o">.</span><span class="n">clk</span><span class="p">))</span>
+    <span class="n">caravelEnv</span><span class="o">.</span><span class="n">setup_clock</span><span class="p">(</span><span class="n">clk</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">caravelEnv</span><span class="o">.</span><span class="n">start_up</span><span class="p">()</span>
+    <span class="k">await</span> <span class="n">ClockCycles</span><span class="p">(</span><span class="n">caravelEnv</span><span class="o">.</span><span class="n">clk</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="c1"># coverage = &#39;COVERAGE&#39; in caravelEnv.design_macros._asdict()</span>
+    <span class="c1"># checker = &#39;CHECKERS&#39; in caravelEnv.design_macros._asdict()</span>
+    <span class="c1"># if checker:</span>
+    <span class="c1">#     HK_whiteBox(dut, checkers=True)</span>
+    <span class="c1">#     GPIOs_ctrlWB(dut, checkers=True)</span>
+    <span class="c1"># elif coverage:</span>
+    <span class="c1">#     HK_whiteBox(dut)</span>
+    <span class="c1">#     GPIOs_ctrlWB(dut)</span>
+    <span class="k">if</span> <span class="s2">&quot;CPU_TYPE_ARM&quot;</span> <span class="ow">in</span> <span class="n">caravelEnv</span><span class="o">.</span><span class="n">design_macros</span><span class="o">.</span><span class="n">_asdict</span><span class="p">():</span>
+        <span class="n">caravelEnv</span><span class="o">.</span><span class="n">active_gpios_num</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="mi">34</span>  <span class="c1"># with ARM the last 3 gpios are not configurable</span>
+        <span class="p">)</span>
+
+    <span class="c1"># For calculating recommended timeout</span>
+    <span class="k">global</span> <span class="n">CLOCK_GLOBAL</span>
+    <span class="n">CLOCK_GLOBAL</span> <span class="o">=</span> <span class="n">clk</span>
+
+    <span class="k">return</span> <span class="n">caravelEnv</span></div>
+
+
+<span class="k">class</span> <span class="nc">CallCounted</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Decorator to determine number of calls for a method&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="n">method</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">repot_test</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">wrapper_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># configure logging</span>
+        <span class="n">TESTFULLNAME</span> <span class="o">=</span> <span class="n">cocotb</span><span class="o">.</span><span class="n">plusargs</span><span class="p">[</span><span class="s2">&quot;FTESTNAME&quot;</span><span class="p">]</span>
+        <span class="n">sim_dir</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cocotb</span><span class="o">.</span><span class="n">plusargs</span><span class="p">[</span><span class="s1">&#39;SIM_PATH&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">cocotb</span><span class="o">.</span><span class="n">plusargs</span><span class="p">[</span><span class="s1">&#39;TAG&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">TestName</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="vm">__name__</span>
+        <span class="n">logger_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sim_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">TESTFULLNAME</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">TestName</span><span class="si">}</span><span class="s2">.log&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+        <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">error</span> <span class="o">=</span> <span class="n">CallCounted</span><span class="p">(</span><span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">)</span>
+        <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">critical</span> <span class="o">=</span> <span class="n">CallCounted</span><span class="p">(</span><span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="p">)</span>
+        <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">warning</span> <span class="o">=</span> <span class="n">CallCounted</span><span class="p">(</span><span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">warning</span><span class="p">)</span>
+        <span class="n">handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="n">logger_file</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+        <span class="n">handler</span><span class="o">.</span><span class="n">addFilter</span><span class="p">(</span><span class="n">SimTimeContextFilter</span><span class="p">())</span>
+        <span class="n">handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">SimLogFormatter</span><span class="p">())</span>
+        <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">handler</span><span class="p">)</span>
+        <span class="c1"># call test</span>
+        <span class="k">await</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s2">&quot;COVERAGE&quot;</span> <span class="ow">in</span> <span class="n">cocotb</span><span class="o">.</span><span class="n">plusargs</span> <span class="ow">or</span> <span class="s2">&quot;CHECKERS&quot;</span> <span class="ow">in</span> <span class="n">cocotb</span><span class="o">.</span><span class="n">plusargs</span><span class="p">:</span>
+            <span class="n">coverage_db</span><span class="o">.</span><span class="n">export_to_yaml</span><span class="p">(</span>
+                <span class="n">filename</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sim_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">TESTFULLNAME</span><span class="si">}</span><span class="s2">/coverage.ylm&quot;</span>
+            <span class="p">)</span>
+        <span class="c1"># report after finish simulation</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;with (</span><span class="si">{</span><span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="o">.</span><span class="n">counter</span><span class="si">}</span><span class="s2">)criticals (</span><span class="si">{</span><span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">counter</span><span class="si">}</span><span class="s2">)errors (</span><span class="si">{</span><span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">warning</span><span class="o">.</span><span class="n">counter</span><span class="si">}</span><span class="s2">)warnings &quot;</span>
+        <span class="k">if</span> <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">counter</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="o">.</span><span class="n">counter</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">cocotb</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">TestComplete</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Test failed </span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Test passed </span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s1">&#39;Cycles consumed = </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">cocotb</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">get_sim_time</span><span class="p">(</span><span class="s2">&quot;ns&quot;</span><span class="p">)</span><span class="o">/</span><span class="n">CLOCK_GLOBAL</span><span class="p">)</span><span class="si">}</span><span class="s1"> recommened timeout = </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">cocotb</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">get_sim_time</span><span class="p">(</span><span class="s2">&quot;ns&quot;</span><span class="p">)</span><span class="o">*</span><span class="mf">1.01</span><span class="o">/</span><span class="n">CLOCK_GLOBAL</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1"> cycles&#39;</span>
+            <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">wrapper_func</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">max_num_error</span><span class="p">(</span><span class="n">num_error</span><span class="p">,</span> <span class="n">clk</span><span class="p">):</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">ClockCycles</span><span class="p">(</span><span class="n">clk</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">counter</span> <span class="o">+</span> <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="o">.</span><span class="n">counter</span> <span class="o">&gt;</span> <span class="n">num_error</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Test failed with max number of errors </span><span class="si">{</span><span class="n">num_error</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="o">.</span><span class="n">counter</span><span class="si">}</span><span class="s2">)criticals (</span><span class="si">{</span><span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">counter</span><span class="si">}</span><span class="s2">)errors (</span><span class="si">{</span><span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">warning</span><span class="o">.</span><span class="n">counter</span><span class="si">}</span><span class="s2">)warnings &quot;</span>
+            <span class="k">raise</span> <span class="n">cocotb</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">TestFailure</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Efabless.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

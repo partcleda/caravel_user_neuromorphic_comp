@@ -1,6 +1,6 @@
-anyio==4.10.0
-certifi==2025.8.3
-ciel==2.1.4
+anyio==4.11.0
+certifi==2025.10.5
+ciel==2.3.1
 click==8.1.8
 cloup==3.0.8
 Deprecated==1.2.18
@@ -8,22 +8,22 @@ exceptiongroup==1.3.0
 h11==0.16.0
 httpcore==1.0.9
 httpx==0.28.1
-idna==3.10
-klayout==0.30.3
-libparse==0.3.1
-librelane @ https://github.com/chipfoundry/openlane-2/tarball/CC2509#sha256=b4e06f2528cd981db74fba3419721df3d89b1a636e2e1ce1fef5847f04a2eb4b
-lxml==6.0.1
-markdown-it-py==4.0.0
+idna==3.11
+klayout==0.30.4.post1
+librelane @ https://github.com/chipfoundry/openlane-2/tarball/CC2509c#sha256=45e5b740c74988060ce583097f7b9f017beb84178817bee217f454c93279a31b
+lln-libparse==0.56.0
+lxml==6.0.2
+markdown-it-py==3.0.0
 mdurl==0.1.2
 pcpp==1.30
-psutil==7.0.0
+psutil==7.1.2
 Pygments==2.19.2
-PyYAML==6.0.2
-RapidFuzz==3.14.0
-rich==14.1.0
+PyYAML==6.0.3
+RapidFuzz==3.13.0
+rich==14.2.0
 semver==3.0.4
 sniffio==1.3.1
 typing_extensions==4.15.0
 wrapt==1.17.3
 yamlcore==0.0.2
-zstandard==0.24.0
+zstandard==0.25.0

@@ -1,0 +1,9 @@
+[console_scripts]
+librelane=librelane.__main__:cli
+librelane.config=librelane.config.__main__:cli
+librelane.env_info=librelane:env_info_cli
+librelane.help=librelane.help.__main__:cli
+librelane.state=librelane.state.__main__:cli
+librelane.steps=librelane.steps.__main__:cli
+openlane=librelane.__main__:cli
+

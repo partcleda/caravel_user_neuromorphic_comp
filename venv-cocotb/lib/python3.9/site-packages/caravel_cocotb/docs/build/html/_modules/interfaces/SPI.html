@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>interfaces.SPI &mdash; caravel_cocotb alpha documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            caravel_cocotb
+          </a>
+              <div class="version">
+                1.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../usage.html">Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python_api.html">Python APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../C_api.html">Firmware APIs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">caravel_cocotb</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">interfaces.SPI</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for interfaces.SPI</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">cocotb</span>
+<span class="kn">from</span> <span class="nn">cocotb.triggers</span> <span class="kn">import</span> <span class="n">FallingEdge</span><span class="p">,</span> <span class="n">RisingEdge</span><span class="p">,</span> <span class="n">Timer</span>
+<span class="kn">from</span> <span class="nn">caravel_cocotb.interfaces.caravel</span> <span class="kn">import</span> <span class="n">Caravel_env</span>
+<span class="kn">from</span> <span class="nn">cocotb.clock</span> <span class="kn">import</span> <span class="n">Clock</span>
+<span class="kn">from</span> <span class="nn">cocotb.binary</span> <span class="kn">import</span> <span class="n">BinaryValue</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">IntEnum</span>
+
+
+<div class="viewcode-block" id="SPI"><a class="viewcode-back" href="../../python_api.html#interfaces.SPI.SPI">[docs]</a><span class="k">class</span> <span class="nc">SPI</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The interface is acting as an spi master. It communicates mainly with the slave inside the housekeeping</span>
+
+<span class="sd">    :param caravelEnv: The Caravel environment object to use.</span>
+<span class="sd">    :type caravelEnv: Caravel_env</span>
+<span class="sd">    :param clk_period: The clock period in microseconds, or None to use the default (3 times the Caravel clock period).</span>
+<span class="sd">    :type clk_period: float or None</span>
+<span class="sd">    :param spi_pins: The SPI pins to use, as a dictionary with keys &quot;CSB&quot;, &quot;SCK&quot;, &quot;SDO&quot;, and &quot;SDI&quot;.</span>
+<span class="sd">    :type spi_pins: dict[str, int]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">caravelEnv</span><span class="p">:</span> <span class="n">Caravel_env</span><span class="p">,</span> <span class="n">clk_period</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">spi_pins</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;CSB&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;SCK&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;SDO&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;SDI&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caravelEnv</span> <span class="o">=</span> <span class="n">caravelEnv</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spi_pins</span> <span class="o">=</span> <span class="n">spi_pins</span>
+        <span class="c1"># if clock period is not given, use caravel clock * 3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clk_period</span> <span class="o">=</span> <span class="n">clk_period</span> <span class="k">if</span> <span class="n">clk_period</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">caravelEnv</span><span class="o">.</span><span class="n">get_clock_obj</span><span class="p">()</span><span class="o">.</span><span class="n">period</span><span class="o">*</span><span class="mi">3</span> <span class="o">/</span> <span class="mi">1000</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caravelEnv</span><span class="o">.</span><span class="n">drive_gpio_in</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spi_pins</span><span class="p">[</span><span class="s2">&quot;SDO&quot;</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="c1"># self._setup_spi_clk()</span>
+
+    <span class="k">def</span> <span class="nf">_setup_spi_clk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Setup the spi clock&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caravelEnv</span><span class="o">.</span><span class="n">dut</span><span class="o">.</span><span class="n">_id</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;gpio</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">spi_pins</span><span class="p">[</span><span class="s1">&#39;SCK&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">_en&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="c1"># await cocotb.triggers.NextTimeStep()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clk</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caravelEnv</span><span class="o">.</span><span class="n">dut</span><span class="o">.</span><span class="n">_id</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;gpio</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">spi_pins</span><span class="p">[</span><span class="s1">&#39;SCK&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">clock</span> <span class="o">=</span> <span class="n">Clock</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clk</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">clk_period</span><span class="p">,</span> <span class="s2">&quot;ns&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clock_op_thread</span> <span class="o">=</span> <span class="n">cocotb</span><span class="o">.</span><span class="n">start_soon</span><span class="p">(</span><span class="n">clock</span><span class="o">.</span><span class="n">start</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_time</span> <span class="o">=</span> <span class="n">cocotb</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">get_sim_time</span><span class="p">(</span><span class="s2">&quot;ns&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_kill_spi_clk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clock_op_thread</span><span class="o">.</span><span class="n">kill</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caravelEnv</span><span class="o">.</span><span class="n">drive_gpio_in</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spi_pins</span><span class="p">[</span><span class="s2">&quot;SCK&quot;</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">_hk_read_byte</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Reads a byte from a housekeeping spi.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            int: The byte read from the spi.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">read_data</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="c1"># self._setup_spi_clk()</span>
+        <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[SPI][_hk_read_byte] reading from SDI&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+            <span class="k">await</span> <span class="n">RisingEdge</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clk</span><span class="p">)</span>
+            <span class="c1"># await cocotb.triggers.NextTimeStep()</span>
+            <span class="n">read_data</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">read_data</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">caravelEnv</span><span class="o">.</span><span class="n">monitor_gpio</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spi_pins</span><span class="p">[</span><span class="s1">&#39;SDI&#39;</span><span class="p">])</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">read_data</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">_hk_read_byte_with_failing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Reads a byte from a housekeeping spi.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            int: The byte read from the spi.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">read_data</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="c1"># self._setup_spi_clk()</span>
+        <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;[SPI][_hk_read_byte] reading from SDI&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+            <span class="k">await</span> <span class="n">FallingEdge</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clk</span><span class="p">)</span>
+            <span class="k">await</span> <span class="n">Timer</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;ns&quot;</span><span class="p">)</span>
+            <span class="n">read_data</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">read_data</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">caravelEnv</span><span class="o">.</span><span class="n">monitor_gpio</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spi_pins</span><span class="p">[</span><span class="s1">&#39;SDI&#39;</span><span class="p">])</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">read_data</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">_hk_write_byte</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Writes a byte of data to housekeeping slave using SDI</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">        - data (int): The 8-bit data to be written.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">        - None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data_bit</span> <span class="o">=</span> <span class="n">BinaryValue</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">n_bits</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">bigEndian</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[SPI][_hk_write_byte] writing </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">data_bit</span><span class="p">)</span><span class="si">}</span><span class="s2"> to SDO&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">await</span> <span class="n">FallingEdge</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clk</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">caravelEnv</span><span class="o">.</span><span class="n">drive_gpio_in</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spi_pins</span><span class="p">[</span><span class="s2">&quot;SDO&quot;</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">data_bit</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">_hk_write_read_byte</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">read_data</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">data_bit</span> <span class="o">=</span> <span class="n">BinaryValue</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">n_bits</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">bigEndian</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[SPI][_hk_write_read_byte] writing </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">data_bit</span><span class="p">)</span><span class="si">}</span><span class="s2"> to SDO and reading back&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">await</span> <span class="n">FallingEdge</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clk</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">caravelEnv</span><span class="o">.</span><span class="n">drive_gpio_in</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spi_pins</span><span class="p">[</span><span class="s2">&quot;SDO&quot;</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">data_bit</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+            <span class="k">await</span> <span class="n">RisingEdge</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clk</span><span class="p">)</span>
+            <span class="c1"># await cocotb.triggers.NextTimeStep()</span>
+            <span class="n">read_data</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">read_data</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">caravelEnv</span><span class="o">.</span><span class="n">monitor_gpio</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spi_pins</span><span class="p">[</span><span class="s1">&#39;SDI&#39;</span><span class="p">])</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">read_data</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_get_cycle_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="n">current_time</span> <span class="o">=</span> <span class="n">cocotb</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">get_sim_time</span><span class="p">(</span><span class="s2">&quot;ns&quot;</span><span class="p">)</span>
+        <span class="n">cycle_num</span> <span class="o">=</span> <span class="p">(</span><span class="n">current_time</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_time</span><span class="p">)</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">clk_period</span>
+        <span class="k">return</span> <span class="n">cycle_num</span>
+
+<div class="viewcode-block" id="SPI.disable_csb"><a class="viewcode-back" href="../../python_api.html#interfaces.SPI.SPI.disable_csb">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">disable_csb</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Disables the housekeeping SPI transmission by driving the CSB line high.</span>
+
+<span class="sd">        **Note:** The function waits for 2 clock cycles before disabling to ensure that the previous writing command has been applied. </span>
+<span class="sd">        It then drives the CSB line high and kills the SPI clock.Finally, the function waits for some time to ensure that the disable has taken effect.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;[SPI][disable_csb] disable housekeeping SPI transmission&quot;</span><span class="p">)</span>
+        <span class="c1"># should wait for 2 clock cycles before disabling </span>
+        <span class="c1"># to wait until writing command got applied</span>
+        <span class="k">await</span> <span class="n">Timer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clk_period</span><span class="p">,</span> <span class="s2">&quot;ns&quot;</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">Timer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clk_period</span><span class="p">,</span> <span class="s2">&quot;ns&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caravelEnv</span><span class="o">.</span><span class="n">drive_gpio_in</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spi_pins</span><span class="p">[</span><span class="s2">&quot;CSB&quot;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_kill_spi_clk</span><span class="p">()</span>
+        <span class="c1"># must wait for some time for the disable get affected</span>
+        <span class="k">await</span> <span class="n">Timer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clk_period</span><span class="p">,</span> <span class="s2">&quot;ns&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="SPI.enable_csb"><a class="viewcode-back" href="../../python_api.html#interfaces.SPI.SPI.enable_csb">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">enable_csb</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Enable the chip select bar (CSB) pin for SPI transmission.</span>
+
+<span class="sd">        **Note:** This method drives the CSB pin low and sets up the SPI clock. It also waits for some time after disabling the CSB pin for the changes to take effect.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;[SPI][enable_csb] enable housekeeping SPI transmission&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">caravelEnv</span><span class="o">.</span><span class="n">monitor_gpio</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spi_pins</span><span class="p">[</span><span class="s2">&quot;CSB&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;[SPI][enable_csb] housekeeping SPI transmission already enabled&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="c1"># must wait for some time for the disable get affected</span>
+        <span class="k">await</span> <span class="n">Timer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clk_period</span><span class="p">,</span> <span class="s2">&quot;ns&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_setup_spi_clk</span><span class="p">()</span>
+        <span class="k">await</span> <span class="n">Timer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clk_period</span><span class="o">*</span><span class="mf">0.5</span><span class="p">,</span> <span class="s2">&quot;ns&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caravelEnv</span><span class="o">.</span><span class="n">drive_gpio_in</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spi_pins</span><span class="p">[</span><span class="s2">&quot;CSB&quot;</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="SPI.write_reg_spi"><a class="viewcode-back" href="../../python_api.html#interfaces.SPI.SPI.write_reg_spi">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">write_reg_spi</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">disable_csb</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Writes a register over SPI using the housekeeping SPI bus.</span>
+
+<span class="sd">        :param address: The address of the register to write.</span>
+<span class="sd">        :type address: int</span>
+<span class="sd">        :param data: The value to write to the register.</span>
+<span class="sd">        :type data: int</span>
+<span class="sd">        :param disable_csb: Whether to disable the chip select line after the write is complete. Defaults to True.</span>
+<span class="sd">        :type disable_csb: bool</span>
+
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[SPI][write_reg_spi] writing address </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">address</span><span class="p">)</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="nb">bin</span><span class="p">(</span><span class="n">address</span><span class="p">)</span><span class="si">}</span><span class="s2">) with data </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="nb">bin</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s2">) using housekeeping SPI&quot;</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">enable_csb</span><span class="p">()</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_write_byte</span><span class="p">(</span><span class="n">SPI</span><span class="o">.</span><span class="n">SPI_COMMAND</span><span class="o">.</span><span class="n">WRITE_STREAM</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_write_byte</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_write_byte</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">disable_csb</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">disable_csb</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="SPI.read_reg_spi"><a class="viewcode-back" href="../../python_api.html#interfaces.SPI.SPI.read_reg_spi">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">read_reg_spi</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">disable_csb</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Reads a byte from a register at the given address over the housekeeping SPI interface.</span>
+
+<span class="sd">        </span>
+<span class="sd">        :param address: The address of the register to read from.</span>
+<span class="sd">        :type address: int</span>
+<span class="sd">        :param disable_csb: Whether to disable the chip select line after reading the byte. Defaults to True.</span>
+<span class="sd">        :type disable_csb: bool</span>
+
+<span class="sd">        :return: int: The byte read from the register.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[SPI][read_reg_spi] reading </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">address</span><span class="p">)</span><span class="si">}</span><span class="s2"> using housekeeping SPI&quot;</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">enable_csb</span><span class="p">()</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_write_byte</span><span class="p">(</span><span class="n">SPI</span><span class="o">.</span><span class="n">SPI_COMMAND</span><span class="o">.</span><span class="n">READ_STREAM</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_write_byte</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">RisingEdge</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clk</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_read_byte</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">disable_csb</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">disable_csb</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+
+<div class="viewcode-block" id="SPI.read_write_reg_spi"><a class="viewcode-back" href="../../python_api.html#interfaces.SPI.SPI.read_write_reg_spi">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">read_write_reg_spi</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">disable_csb</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Writes to and reads from a register at the given SPI address using the housekeeping SPI.</span>
+
+<span class="sd">        :param address: The address of the register to write to/read from.</span>
+<span class="sd">        :type address: int</span>
+<span class="sd">        :param data: The data to write to the register.</span>
+<span class="sd">        :type data: int</span>
+<span class="sd">        :param disable_csb: Whether to disable the chip select line after the operation. Defaults to True.</span>
+<span class="sd">        :type disable_csb: bool</span>
+<span class="sd">        :return: int: The data read from the register.</span>
+
+<span class="sd">        :examples:</span>
+
+<span class="sd">            &gt;&gt;&gt; result = await read_write_reg_spi(0x14, 0xAB)</span>
+<span class="sd">            &gt;&gt;&gt; print(hex(result))</span>
+<span class="sd">            0x42</span>
+<span class="sd">            &gt;&gt;&gt; result = await read_write_reg_spi(0x14, 0xD7)</span>
+<span class="sd">            &gt;&gt;&gt; print(hex(result))</span>
+<span class="sd">            0xAB</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[SPI][read_write_reg_spi] writing address </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">address</span><span class="p">)</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="nb">bin</span><span class="p">(</span><span class="n">address</span><span class="p">)</span><span class="si">}</span><span class="s2">) with data </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="nb">bin</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s2">) using housekeeping SPI&quot;</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">enable_csb</span><span class="p">()</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_write_byte</span><span class="p">(</span><span class="n">SPI</span><span class="o">.</span><span class="n">SPI_COMMAND</span><span class="o">.</span><span class="n">WRITE_READ</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_write_byte</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_write_read_byte</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">disable_csb</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">disable_csb</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+    
+<div class="viewcode-block" id="SPI.write_reg_spi_nbytes"><a class="viewcode-back" href="../../python_api.html#interfaces.SPI.SPI.write_reg_spi_nbytes">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">write_reg_spi_nbytes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">n_bytes</span><span class="p">,</span> <span class="n">disable_csb</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Writes to `n_bytes` bytes starting from the register at `address` over the housekeeping SPI.</span>
+
+<span class="sd">        :param address: The address of the register to write.</span>
+<span class="sd">        :type address: int</span>
+<span class="sd">        :param data: The data to be written to the register.</span>
+<span class="sd">        :type data: list(int)</span>
+<span class="sd">        :param n_bytes: The number of bytes to be written.</span>
+<span class="sd">        :type n_bytes: int</span>
+<span class="sd">        :param disable_csb: Whether to disable chip select after write. Defaults to True.</span>
+<span class="sd">        :type disable_csb: bool</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[SPI][write_reg_spi_nbytes] writing address </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">address</span><span class="p">)</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="nb">bin</span><span class="p">(</span><span class="n">address</span><span class="p">)</span><span class="si">}</span><span class="s2">) with data </span><span class="si">{</span><span class="n">data</span><span class="si">}</span><span class="s2"> using housekeeping SPI&quot;</span><span class="p">)</span>
+        <span class="n">write_command</span> <span class="o">=</span> <span class="n">SPI</span><span class="o">.</span><span class="n">SPI_COMMAND</span><span class="o">.</span><span class="n">WRITE_STREAM</span><span class="o">.</span><span class="n">value</span> <span class="o">|</span> <span class="n">n_bytes</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">enable_csb</span><span class="p">()</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_write_byte</span><span class="p">(</span><span class="n">write_command</span><span class="p">)</span>  <span class="c1"># Write n byte command</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_write_byte</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">byte</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_write_byte</span><span class="p">(</span><span class="n">byte</span><span class="p">)</span>  <span class="c1"># Data</span>
+        <span class="k">if</span> <span class="n">disable_csb</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">disable_csb</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="SPI.read_reg_spi_nbytes"><a class="viewcode-back" href="../../python_api.html#interfaces.SPI.SPI.read_reg_spi_nbytes">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">read_reg_spi_nbytes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">n_bytes</span><span class="p">,</span> <span class="n">disable_csb</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read `n_bytes` bytes starting from the register at `address` over the housekeeping SPI.</span>
+
+<span class="sd">        :param address: The address of the register to read.</span>
+<span class="sd">        :type address: int</span>
+<span class="sd">        :param n_bytes: The number of bytes to read.</span>
+<span class="sd">        :type n_bytes: int</span>
+<span class="sd">        :param disable_csb: Whether to disable chip select after reading. Defaults to True.</span>
+<span class="sd">        :type disable_csb: bool</span>
+<span class="sd">        :return: A list with `n_bytes` integers, where each integer is a byte read from the register.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[SPI][read_reg_spi_nbytes] reading </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">address</span><span class="p">)</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="nb">bin</span><span class="p">(</span><span class="n">address</span><span class="p">)</span><span class="si">}</span><span class="s2">) using housekeeping SPI&quot;</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">enable_csb</span><span class="p">()</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_write_byte</span><span class="p">(</span><span class="n">SPI</span><span class="o">.</span><span class="n">SPI_COMMAND</span><span class="o">.</span><span class="n">READ_STREAM</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_write_byte</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">RisingEdge</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clk</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_bytes</span><span class="p">):</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_read_byte</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">disable_csb</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">disable_csb</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+
+<div class="viewcode-block" id="SPI.reg_spi_user_pass_thru"><a class="viewcode-back" href="../../python_api.html#interfaces.SPI.SPI.reg_spi_user_pass_thru">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">reg_spi_user_pass_thru</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">send_data</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">read_byte_num</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">disable_csb</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sends SPI data to a housekeeping SPI using user pass-thru command.</span>
+<span class="sd">        </span>
+<span class="sd">        :param send_data: A list of data to be sent includeing the commands and addresses.</span>
+<span class="sd">        :type send_data: list</span>
+<span class="sd">        :param read_byte_num: expected number of bytes to be read defaults to 0.</span>
+<span class="sd">        :type read_byte_num: int</span>
+<span class="sd">        :param disable_csb: Whether to disable CSB after the transaction defaults to True.</span>
+<span class="sd">        :type disable_csb: bool</span>
+<span class="sd">        :return: A list of read data if `read_byte_num` is not 0.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cocotb</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[SPI][reg_spi_user_pass_thru] send data</span><span class="si">{</span><span class="n">send_data</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">enable_csb</span><span class="p">()</span>
+        <span class="c1"># Apply user pass-thru command to housekeeping SPI</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_write_byte</span><span class="p">(</span><span class="n">SPI</span><span class="o">.</span><span class="n">SPI_COMMAND</span><span class="o">.</span><span class="n">USER_PASS_THRU</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">RisingEdge</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clk</span><span class="p">)</span>
+        <span class="c1"># SEND</span>
+        <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">send_data</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_write_byte</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="c1"># READ</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">read_byte_num</span><span class="p">):</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_read_byte</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">disable_csb</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">disable_csb</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+
+    <span class="c1"># use for configure in mgmt pass thru or user pass thru or any other command that doesn&#39;t have a function </span>
+<div class="viewcode-block" id="SPI.reg_spi_op"><a class="viewcode-back" href="../../python_api.html#interfaces.SPI.SPI.reg_spi_op">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">reg_spi_op</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">disable_csb</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Perform a register SPI operation.</span>
+
+<span class="sd">        :param command: The SPI command byte.</span>
+<span class="sd">        :type command: int</span>
+<span class="sd">        :param address: The SPI address byte.</span>
+<span class="sd">        :type address: int</span>
+<span class="sd">        :param disable_csb: Whether to disable the chip select line after the operation. Defaults to True.</span>
+<span class="sd">        :type disable_csb: bool</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">enable_csb</span><span class="p">()</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_write_byte</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hk_write_byte</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">disable_csb</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">disable_csb</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="SPI.SPI_COMMAND"><a class="viewcode-back" href="../../python_api.html#interfaces.SPI.SPI.SPI_COMMAND">[docs]</a>    <span class="k">class</span> <span class="nc">SPI_COMMAND</span><span class="p">(</span><span class="n">IntEnum</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        enum class representing SPI command bytes.</span>
+
+<span class="sd">        members:</span>
+<span class="sd">            :NO_OP: A command byte representing a no-op operation.</span>
+<span class="sd">            :WRITE_STREAM: A command byte representing a write stream operation.</span>
+<span class="sd">            :READ_STREAM: A command byte representing a read stream operation.</span>
+<span class="sd">            :WRITE_READ: A command byte representing a write-and-read operation.</span>
+<span class="sd">            :USER_PASS_THRU: A command byte representing a user pass-through operation.</span>
+<span class="sd">            :MGMT_PATH_THRU: A command byte representing a management path pass-through operation.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">NO_OP</span> <span class="o">=</span> <span class="mh">0x0</span>
+        <span class="n">WRITE_STREAM</span> <span class="o">=</span> <span class="mh">0x80</span>
+        <span class="n">READ_STREAM</span> <span class="o">=</span> <span class="mh">0x40</span>
+        <span class="n">WRITE_READ</span> <span class="o">=</span> <span class="mh">0xC0</span>
+        <span class="n">USER_PASS_THRU</span> <span class="o">=</span> <span class="mh">0x02</span>
+        <span class="n">MGMT_PATH_THRU</span> <span class="o">=</span> <span class="mh">0xC4</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Efabless.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

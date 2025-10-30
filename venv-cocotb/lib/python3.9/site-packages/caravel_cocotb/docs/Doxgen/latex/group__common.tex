@@ -1,0 +1,53 @@
+\hypertarget{group__common}{}\section{Common}
+\label{group__common}\index{Common@{Common}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__common_gaf79fbe355fd538621db12e3ae9e3e6b8}{enable\+\_\+user\+\_\+interface} ()
+\item 
+void \hyperlink{group__common_ga37a92e81df76732622207204976178f9}{enable\+\_\+hk\+\_\+spi} (bool is\+\_\+enable)
+\item 
+void \hyperlink{group__common_ga875e99bdc81b2f0c925af03d4881438c}{dummy\+\_\+delay} (int num)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Common functions 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__common_ga875e99bdc81b2f0c925af03d4881438c}\label{group__common_ga875e99bdc81b2f0c925af03d4881438c}} 
+\index{Common@{Common}!dummy\+\_\+delay@{dummy\+\_\+delay}}
+\index{dummy\+\_\+delay@{dummy\+\_\+delay}!Common@{Common}}
+\subsubsection{\texorpdfstring{dummy\+\_\+delay()}{dummy\_delay()}}
+{\footnotesize\ttfamily void dummy\+\_\+delay (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+Insert delay
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & number of delays steps. step is increment local variable and check it\textquotesingle{}s value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__common_ga37a92e81df76732622207204976178f9}\label{group__common_ga37a92e81df76732622207204976178f9}} 
+\index{Common@{Common}!enable\+\_\+hk\+\_\+spi@{enable\+\_\+hk\+\_\+spi}}
+\index{enable\+\_\+hk\+\_\+spi@{enable\+\_\+hk\+\_\+spi}!Common@{Common}}
+\subsubsection{\texorpdfstring{enable\+\_\+hk\+\_\+spi()}{enable\_hk\_spi()}}
+{\footnotesize\ttfamily void enable\+\_\+hk\+\_\+spi (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+enable }\end{DoxyParamCaption})}
+
+Enable or disable the housekeeping S\+PI This function writes to the housekeeping disenable register inside the housekeeping \begin{DoxyNote}{Note}
+When this register asserted housekeeping S\+PI can\textquotesingle{}t be used and gpios \mbox{[}3\mbox{]} which is C\+SB can be used as anyother housekeeping gpio
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em is\+\_\+enable} & when 1 (true) housekeeping is active, 0 (false) housekeeping is disabled \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__common_gaf79fbe355fd538621db12e3ae9e3e6b8}\label{group__common_gaf79fbe355fd538621db12e3ae9e3e6b8}} 
+\index{Common@{Common}!enable\+\_\+user\+\_\+interface@{enable\+\_\+user\+\_\+interface}}
+\index{enable\+\_\+user\+\_\+interface@{enable\+\_\+user\+\_\+interface}!Common@{Common}}
+\subsubsection{\texorpdfstring{enable\+\_\+user\+\_\+interface()}{enable\_user\_interface()}}
+{\footnotesize\ttfamily void enable\+\_\+user\+\_\+interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Enable communication  between software and user project \begin{DoxyWarning}{Warning}
+This necessary when reading or writing are needed between wishbone and user project if interface isn\textquotesingle{}t enabled no ack would be recieve and the writing or reading command will be stuck 
+\end{DoxyWarning}
