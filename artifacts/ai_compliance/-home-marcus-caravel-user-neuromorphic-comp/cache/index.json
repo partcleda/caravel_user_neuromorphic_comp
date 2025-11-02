@@ -1,0 +1,214 @@
+{
+  "version": "0.7.0",
+  "cache_created": "2025-11-01T22:25:40.129354",
+  "last_updated": "2025-11-02T05:16:14.298854",
+  "project_path": "/home/marcus/.claude/projects/-home-marcus-caravel-user-neuromorphic-comp",
+  "cached_files": {
+    "5051695b-126a-4791-a47c-930ba29dd4dd.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-user-neuromorphic-comp/5051695b-126a-4791-a47c-930ba29dd4dd.jsonl",
+      "source_mtime": 1762042713.4779174,
+      "cached_mtime": 1762061140.1470876,
+      "message_count": 389,
+      "session_ids": [
+        "5051695b-126a-4791-a47c-930ba29dd4dd"
+      ]
+    },
+    "agent-e232eb5d.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-user-neuromorphic-comp/agent-e232eb5d.jsonl",
+      "source_mtime": 1762031647.4346125,
+      "cached_mtime": 1762061140.1480875,
+      "message_count": 2,
+      "session_ids": [
+        "5051695b-126a-4791-a47c-930ba29dd4dd"
+      ]
+    },
+    "agent-b8de5934.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-user-neuromorphic-comp/agent-b8de5934.jsonl",
+      "source_mtime": 1762031647.4346125,
+      "cached_mtime": 1762061140.1480875,
+      "message_count": 2,
+      "session_ids": [
+        "5051695b-126a-4791-a47c-930ba29dd4dd"
+      ]
+    },
+    "agent-0e8031c9.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-user-neuromorphic-comp/agent-0e8031c9.jsonl",
+      "source_mtime": 1762033017.6475236,
+      "cached_mtime": 1762061140.1510875,
+      "message_count": 59,
+      "session_ids": [
+        "5051695b-126a-4791-a47c-930ba29dd4dd"
+      ]
+    },
+    "agent-c274d339.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-user-neuromorphic-comp/agent-c274d339.jsonl",
+      "source_mtime": 1762035919.6776032,
+      "cached_mtime": 1762061140.1550875,
+      "message_count": 86,
+      "session_ids": [
+        "5051695b-126a-4791-a47c-930ba29dd4dd"
+      ]
+    },
+    "agent-661612fe.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-user-neuromorphic-comp/agent-661612fe.jsonl",
+      "source_mtime": 1762039412.9381804,
+      "cached_mtime": 1762061140.1590874,
+      "message_count": 93,
+      "session_ids": [
+        "5051695b-126a-4791-a47c-930ba29dd4dd"
+      ]
+    },
+    "cd123322-7b2f-48e6-9b3a-9a1f52d2556c.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-user-neuromorphic-comp/cd123322-7b2f-48e6-9b3a-9a1f52d2556c.jsonl",
+      "source_mtime": 1762060921.431339,
+      "cached_mtime": 1762061140.1670876,
+      "message_count": 154,
+      "session_ids": [
+        "cd123322-7b2f-48e6-9b3a-9a1f52d2556c"
+      ]
+    },
+    "agent-ed80c4e4.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-user-neuromorphic-comp/agent-ed80c4e4.jsonl",
+      "source_mtime": 1762056059.914974,
+      "cached_mtime": 1762061140.1680875,
+      "message_count": 2,
+      "session_ids": [
+        "cd123322-7b2f-48e6-9b3a-9a1f52d2556c"
+      ]
+    },
+    "agent-8b8e4acd.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-user-neuromorphic-comp/agent-8b8e4acd.jsonl",
+      "source_mtime": 1762056062.986973,
+      "cached_mtime": 1762061140.1680875,
+      "message_count": 2,
+      "session_ids": [
+        "cd123322-7b2f-48e6-9b3a-9a1f52d2556c"
+      ]
+    },
+    "agent-b87ea539.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-user-neuromorphic-comp/agent-b87ea539.jsonl",
+      "source_mtime": 1762057564.9493458,
+      "cached_mtime": 1762061140.1690874,
+      "message_count": 8,
+      "session_ids": [
+        "cd123322-7b2f-48e6-9b3a-9a1f52d2556c"
+      ]
+    },
+    "32e0bda2-70a0-4830-8d87-36527b3a051d.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-user-neuromorphic-comp/32e0bda2-70a0-4830-8d87-36527b3a051d.jsonl",
+      "source_mtime": 1762060938.889319,
+      "cached_mtime": 1762061140.1690874,
+      "message_count": 0,
+      "session_ids": []
+    },
+    "agent-e243ba21.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-user-neuromorphic-comp/agent-e243ba21.jsonl",
+      "source_mtime": 1762060930.5993285,
+      "cached_mtime": 1762061140.1700876,
+      "message_count": 2,
+      "session_ids": [
+        "32e0bda2-70a0-4830-8d87-36527b3a051d"
+      ]
+    },
+    "agent-e0a7647b.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-user-neuromorphic-comp/agent-e0a7647b.jsonl",
+      "source_mtime": 1762060933.617325,
+      "cached_mtime": 1762061140.1700876,
+      "message_count": 2,
+      "session_ids": [
+        "32e0bda2-70a0-4830-8d87-36527b3a051d"
+      ]
+    },
+    "e658fe5d-e289-43be-931d-99ed34639ec6.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-user-neuromorphic-comp/e658fe5d-e289-43be-931d-99ed34639ec6.jsonl",
+      "source_mtime": 1762062396.292692,
+      "cached_mtime": 1762089374.2962685,
+      "message_count": 2,
+      "session_ids": [
+        "e658fe5d-e289-43be-931d-99ed34639ec6"
+      ]
+    },
+    "agent-82e5fba2.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-user-neuromorphic-comp/agent-82e5fba2.jsonl",
+      "source_mtime": 1762062381.0067086,
+      "cached_mtime": 1762089374.2962685,
+      "message_count": 2,
+      "session_ids": [
+        "e658fe5d-e289-43be-931d-99ed34639ec6"
+      ]
+    },
+    "agent-717b09ba.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-user-neuromorphic-comp/agent-717b09ba.jsonl",
+      "source_mtime": 1762062384.5397048,
+      "cached_mtime": 1762089374.2962685,
+      "message_count": 2,
+      "session_ids": [
+        "e658fe5d-e289-43be-931d-99ed34639ec6"
+      ]
+    }
+  },
+  "total_message_count": 807,
+  "total_input_tokens": 35550,
+  "total_output_tokens": 24413,
+  "total_cache_creation_tokens": 1135507,
+  "total_cache_read_tokens": 14020171,
+  "sessions": {
+    "5051695b-126a-4791-a47c-930ba29dd4dd": {
+      "session_id": "5051695b-126a-4791-a47c-930ba29dd4dd",
+      "summary": "Unable to provide title - no conversation content available.",
+      "first_timestamp": "2025-11-01T21:14:07.217Z",
+      "last_timestamp": "2025-11-02T00:18:33.428Z",
+      "message_count": 631,
+      "first_user_message": "Warmup",
+      "cwd": "/home/marcus/caravel_user_neuromorphic_comp",
+      "total_input_tokens": 27876,
+      "total_output_tokens": 19364,
+      "total_cache_creation_tokens": 1006361,
+      "total_cache_read_tokens": 12135511
+    },
+    "cd123322-7b2f-48e6-9b3a-9a1f52d2556c": {
+      "session_id": "cd123322-7b2f-48e6-9b3a-9a1f52d2556c",
+      "summary": null,
+      "first_timestamp": "2025-11-02T04:00:53.101Z",
+      "last_timestamp": "2025-11-02T05:22:01.415Z",
+      "message_count": 165,
+      "first_user_message": "Warmup",
+      "cwd": "/home/marcus/caravel_user_neuromorphic_comp",
+      "total_input_tokens": 4859,
+      "total_output_tokens": 3823,
+      "total_cache_creation_tokens": 124901,
+      "total_cache_read_tokens": 1872548
+    },
+    "32e0bda2-70a0-4830-8d87-36527b3a051d": {
+      "session_id": "32e0bda2-70a0-4830-8d87-36527b3a051d",
+      "summary": null,
+      "first_timestamp": "2025-11-02T05:22:08.193Z",
+      "last_timestamp": "2025-11-02T05:22:13.580Z",
+      "message_count": 4,
+      "first_user_message": "Warmup",
+      "cwd": "/home/marcus/caravel_user_neuromorphic_comp",
+      "total_input_tokens": 1373,
+      "total_output_tokens": 347,
+      "total_cache_creation_tokens": 0,
+      "total_cache_read_tokens": 0
+    },
+    "e658fe5d-e289-43be-931d-99ed34639ec6": {
+      "session_id": "e658fe5d-e289-43be-931d-99ed34639ec6",
+      "summary": null,
+      "first_timestamp": "2025-11-02T05:46:17.744Z",
+      "last_timestamp": "2025-11-02T05:46:36.238Z",
+      "message_count": 6,
+      "first_user_message": "Warmup",
+      "cwd": "/home/marcus/caravel_user_neuromorphic_comp",
+      "total_input_tokens": 1442,
+      "total_output_tokens": 879,
+      "total_cache_creation_tokens": 4245,
+      "total_cache_read_tokens": 12112
+    }
+  },
+  "working_directories": [
+    "/home/marcus/caravel_user_neuromorphic_comp"
+  ],
+  "earliest_timestamp": "2025-11-01T21:14:07.217Z",
+  "latest_timestamp": "2025-11-02T05:46:36.238Z"
+}
