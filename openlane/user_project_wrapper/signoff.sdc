@@ -144,13 +144,14 @@ if { $::env(IO_SYNC) } {
 # --- Treat the hard macro as a pure black box for STA
 #     (prevents artificial short paths that cause hold violations)
 
-# Cut all timing arcs inside/through the macro instance "mprj"
-set mprj_cell [get_cells -hierarchical mprj]
+# Cut all timing arcs inside/through the macro instance "neuro_inst"
+# (previously called mprj)
+set mprj_cell [get_cells -hierarchical neuro_inst]
 if {[llength $mprj_cell]} {
     set_disable_timing $mprj_cell
 
     # Extra safety: also cut any paths that pass through macro pins
-    set mprj_pins [get_pins -hierarchical mprj/*]
+    set mprj_pins [get_pins -hierarchical neuro_inst/*]
     if {[llength $mprj_pins]} {
         set_false_path -through $mprj_pins
     }

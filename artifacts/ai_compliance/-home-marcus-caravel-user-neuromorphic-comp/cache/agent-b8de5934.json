@@ -1,0 +1,61 @@
+{
+  "2025-11-01T21:14:07.217Z": [
+    {
+      "parentUuid": null,
+      "isSidechain": true,
+      "userType": "external",
+      "cwd": "/home/marcus/caravel_user_neuromorphic_comp",
+      "sessionId": "5051695b-126a-4791-a47c-930ba29dd4dd",
+      "version": "2.0.31",
+      "uuid": "565221fa-4caf-430e-8827-9014a48f22e0",
+      "timestamp": "2025-11-01T21:14:07.217Z",
+      "isMeta": null,
+      "type": "user",
+      "message": {
+        "role": "user",
+        "content": "Warmup"
+      },
+      "toolUseResult": null
+    }
+  ],
+  "2025-11-01T21:14:07.416Z": [
+    {
+      "parentUuid": "565221fa-4caf-430e-8827-9014a48f22e0",
+      "isSidechain": true,
+      "userType": "external",
+      "cwd": "/home/marcus/caravel_user_neuromorphic_comp",
+      "sessionId": "5051695b-126a-4791-a47c-930ba29dd4dd",
+      "version": "2.0.31",
+      "uuid": "2bc73ffe-3fa0-4f64-ae17-ac7ddd096a5d",
+      "timestamp": "2025-11-01T21:14:07.416Z",
+      "isMeta": null,
+      "type": "assistant",
+      "message": {
+        "id": "936f2767-6414-40af-9898-4bcadc752a14",
+        "type": "message",
+        "role": "assistant",
+        "model": "<synthetic>",
+        "content": [
+          {
+            "citations": null,
+            "text": "Invalid API key \u00b7 Please run /login",
+            "type": "text"
+          }
+        ],
+        "stop_reason": "stop_sequence",
+        "stop_sequence": "",
+        "usage": {
+          "input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 0,
+          "service_tier": null,
+          "server_tool_use": {
+            "web_search_requests": 0
+          }
+        }
+      },
+      "requestId": null
+    }
+  ]
+}

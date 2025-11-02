@@ -1,0 +1,30 @@
+     0.00ns INFO     cocotb                              [caravel] start powering up
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vdd
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vcc
+   475.00ns INFO     cocotb                              [caravel] disable housekeeping SPI transmission
+   525.00ns INFO     cocotb                              [caravel] start resetting
+  1050.00ns INFO     cocotb                              [caravel] finish resetting
+  1325.00ns INFO     cocotb                             [TEST] Starting Matrix Multiplier Identity Test
+  1325.00ns INFO     cocotb                             [TEST] Computing: Identity * Matrix = Matrix
+  1325.00ns INFO     cocotb                             [TEST] A = 2x2 identity (padded to 8x8)
+  1325.00ns INFO     cocotb                             [TEST] B = [[5,6],[7,8]] (padded to 8x8)
+  1325.00ns INFO     cocotb                             [TEST] Expected C = B
+  1325.00ns INFO     cocotb                             [TEST] Waiting for firmware ready...
+572750.00ns INFO     cocotb                             [TEST] Firmware ready - releasing CSB
+572750.00ns INFO     cocotb                              [caravel] release housekeeping SPI transmission
+572775.00ns INFO     cocotb                             [TEST] Firmware executing identity matrix test...
+2499975.00ns WARNING  cocotb                             simulation are only 400000 cycles away from TIMEOUT 
+3624300.00ns INFO     cocotb                             [TEST] ========================================
+3624300.00ns INFO     cocotb                             [TEST] Identity Matrix Test PASSED
+3624300.00ns INFO     cocotb                             [TEST] ========================================
+3624300.00ns INFO     cocotb                             Test passed with (0)criticals (0)errors (1)warnings 
+3624300.00ns INFO     cocotb                             Cycles consumed = 144972 recommened timeout = 159470 cycles
+3624300.00ns INFO     cocotb.regression                  report_test.<locals>.wrapper_func [32mpassed[49m[39m
+3624300.00ns INFO     cocotb.regression                  *****************************************************************************************************************************************************
+                                                         ** TEST                                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                         *****************************************************************************************************************************************************
+                                                         ** caravel_cocotb.interfaces.common_functions.test_functions.report_test.<locals>.wrapper_func  [32m PASS [49m[39m    3624300.00          40.32      89891.18  **
+                                                         *****************************************************************************************************************************************************
+                                                         ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                                           3624300.00          40.36      89788.49  **
+                                                         *****************************************************************************************************************************************************
+                                                         

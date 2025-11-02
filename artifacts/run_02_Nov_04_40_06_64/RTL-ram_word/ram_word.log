@@ -1,0 +1,22 @@
+     0.00ns INFO     cocotb                              [caravel] start powering up
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vdd
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vcc
+   475.00ns INFO     cocotb                              [caravel] disable housekeeping SPI transmission
+   525.00ns INFO     cocotb                              [caravel] start resetting
+  1050.00ns INFO     cocotb                              [caravel] finish resetting
+  1325.00ns INFO     cocotb                             [TEST] Starting ReRam_word test
+610200.00ns INFO     cocotb                             [TEST] Start Write and Read.
+610200.00ns INFO     cocotb                              [caravel] release housekeeping SPI transmission
+610225.00ns INFO     cocotb                             [TEST] Processing Write and Read.
+1049300.00ns INFO     cocotb                             [TEST] Completed Write and Read
+1049300.00ns INFO     cocotb                             Test passed with (0)criticals (0)errors (0)warnings 
+1049300.00ns INFO     cocotb                             Cycles consumed = 41972 recommened timeout = 46170 cycles
+1049300.00ns INFO     cocotb.regression                  report_test.<locals>.wrapper_func [32mpassed[49m[39m
+1049300.00ns INFO     cocotb.regression                  *****************************************************************************************************************************************************
+                                                         ** TEST                                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                         *****************************************************************************************************************************************************
+                                                         ** caravel_cocotb.interfaces.common_functions.test_functions.report_test.<locals>.wrapper_func  [32m PASS [49m[39m    1049300.00          12.95      80996.32  **
+                                                         *****************************************************************************************************************************************************
+                                                         ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                                           1049300.00          13.00      80706.61  **
+                                                         *****************************************************************************************************************************************************
+                                                         

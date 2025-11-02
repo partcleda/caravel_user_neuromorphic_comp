@@ -1,0 +1,26 @@
+     0.00ns INFO     cocotb                              [caravel] start powering up
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vdd
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vcc
+   475.00ns INFO     cocotb                              [caravel] disable housekeeping SPI transmission
+   525.00ns INFO     cocotb                              [caravel] start resetting
+  1050.00ns INFO     cocotb                              [caravel] finish resetting
+  1325.00ns INFO     cocotb                             [TEST] Starting Matrix Multiplier Unsigned Mode Test
+  1325.00ns INFO     cocotb                             [TEST] Testing unsigned 8-bit multiplication
+  1325.00ns INFO     cocotb                             [TEST] Expected: C[0][0] = 2*4 + 3*5 = 23
+588450.00ns INFO     cocotb                              [caravel] release housekeeping SPI transmission
+588475.00ns INFO     cocotb                             [TEST] Firmware executing unsigned mode test...
+2499975.00ns WARNING  cocotb                             simulation are only 400000 cycles away from TIMEOUT 
+2810350.00ns INFO     cocotb                             [TEST] ========================================
+2810350.00ns INFO     cocotb                             [TEST] Unsigned Mode Test PASSED
+2810350.00ns INFO     cocotb                             [TEST] ========================================
+2810350.00ns INFO     cocotb                             Test passed with (0)criticals (0)errors (1)warnings 
+2810350.00ns INFO     cocotb                             Cycles consumed = 112414 recommened timeout = 123656 cycles
+2810350.00ns INFO     cocotb.regression                  report_test.<locals>.wrapper_func [32mpassed[49m[39m
+2810350.00ns INFO     cocotb.regression                  *****************************************************************************************************************************************************
+                                                         ** TEST                                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                         *****************************************************************************************************************************************************
+                                                         ** caravel_cocotb.interfaces.common_functions.test_functions.report_test.<locals>.wrapper_func  [32m PASS [49m[39m    2810350.00          31.47      89306.81  **
+                                                         *****************************************************************************************************************************************************
+                                                         ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                                           2810350.00          31.52      89174.56  **
+                                                         *****************************************************************************************************************************************************
+                                                         

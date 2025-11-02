@@ -1,0 +1,24 @@
+     0.00ns INFO     cocotb                              [caravel] start powering up
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vdd
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vcc
+   475.00ns INFO     cocotb                              [caravel] disable housekeeping SPI transmission
+   525.00ns INFO     cocotb                              [caravel] start resetting
+  1050.00ns INFO     cocotb                              [caravel] finish resetting
+  1325.00ns INFO     cocotb                             [TEST] Starting Matrix Multiplier Reset Test
+  1325.00ns INFO     cocotb                             [TEST] Testing soft reset via CTRL register
+546175.00ns INFO     cocotb                              [caravel] release housekeeping SPI transmission
+546200.00ns INFO     cocotb                             [TEST] Firmware executing reset test...
+738525.00ns INFO     cocotb                             [TEST] ========================================
+738525.00ns INFO     cocotb                             [TEST] Reset Test PASSED
+738525.00ns INFO     cocotb                             [TEST] ========================================
+738525.00ns INFO     cocotb                             Test passed with (0)criticals (0)errors (0)warnings 
+738525.00ns INFO     cocotb                             Cycles consumed = 29541 recommened timeout = 32496 cycles
+738525.00ns INFO     cocotb.regression                  report_test.<locals>.wrapper_func [32mpassed[49m[39m
+738525.00ns INFO     cocotb.regression                  *****************************************************************************************************************************************************
+                                                        ** TEST                                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************************************************************
+                                                        ** caravel_cocotb.interfaces.common_functions.test_functions.report_test.<locals>.wrapper_func  [32m PASS [49m[39m     738525.00           9.00      82079.54  **
+                                                        *****************************************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                                            738525.00           9.04      81657.98  **
+                                                        *****************************************************************************************************************************************************
+                                                        

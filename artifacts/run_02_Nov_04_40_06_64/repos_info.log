@@ -1,0 +1,46 @@
+#### Caravel repo info ####
+Repo: caravel-lite  (https://github.com/https://github.com/chipfoundry/caravel-lite )
+Branch name: commit 58c8c7782973f5350b8535d21c6a8c10118fd76c
+Author: Marwan Abbas <67271180+marwaneltoukhy@users.noreply.github.com>
+Date:   Tue Jun 10 10:18:05 2025 -0700
+
+    Merge pull request #2 from chipfoundry/update-to-use-ciel
+    
+    Update Makefile
+
+
+#### Caravel Managment repo info ####
+Repo: caravel_mgmt_soc_litex  (https://github.com/https://github.com/chipfoundry/caravel_mgmt_soc_litex )
+Branch name: commit 503eda0790085712ffef7f4ad8934c7daed3237f
+Author: Jeff DiCorpo <42048757+jeffdi@users.noreply.github.com>
+Date:   Wed Jan 3 09:00:15 2024 -0800
+
+    Merge pull request #135 from efabless/update_c_apis
+    
+    Update c APIs to fix functions that doesn't work after optimization
+
+
+#### User repo info ####
+Repo: caravel_user_neuromorphic_comp  (https://github.com/https://github.com/partcleda/caravel_user_neuromorphic_comp )
+Branch name: bugfix/matmul
+commit 993f035d6666bc0e0734303b47b866853744ab19
+Author: marcuspartcl <marcus@partcl.com>
+Date:   Sat Nov 1 21:09:52 2025 -0700
+
+    (Claude) RTL, testbench for matrix multiplier
+    
+    (Claude) Created RTL, testbench for the 8x8 byte
+    matrix mulitplication accelerator.
+
+
+#### caravel-dynamic-sims repo info ####
+Repo: caravel_user_neuromorphic_comp  (https://github.com/https://github.com/partcleda/caravel_user_neuromorphic_comp )
+Branch name: bugfix/matmul
+commit 993f035d6666bc0e0734303b47b866853744ab19
+Author: marcuspartcl <marcus@partcl.com>
+Date:   Sat Nov 1 21:09:52 2025 -0700
+
+    (Claude) RTL, testbench for matrix multiplier
+    
+    (Claude) Created RTL, testbench for the 8x8 byte
+    matrix mulitplication accelerator.

@@ -1,0 +1,26 @@
+     0.00ns INFO     cocotb                              [caravel] start powering up
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vdd
+   225.00ns INFO     cocotb                              [caravel] power up -> connect vcc
+   475.00ns INFO     cocotb                              [caravel] disable housekeeping SPI transmission
+   525.00ns INFO     cocotb                              [caravel] start resetting
+  1050.00ns INFO     cocotb                              [caravel] finish resetting
+  1325.00ns INFO     cocotb                             [TEST] Starting Matrix Multiplier Full 8x8 Test
+  1325.00ns INFO     cocotb                             [TEST] Computing: 8x8 * 8x8 matrix multiplication
+  1325.00ns INFO     cocotb                             [TEST] A = [0..63], B = [0..63]
+  1325.00ns INFO     cocotb                             [TEST] Expected cycle count: ~26
+588275.00ns INFO     cocotb                              [caravel] release housekeeping SPI transmission
+588300.00ns INFO     cocotb                             [TEST] Firmware executing full 8x8 test...
+3476775.00ns INFO     cocotb                             [TEST] ========================================
+3476775.00ns INFO     cocotb                             [TEST] Full 8x8 Test PASSED
+3476775.00ns INFO     cocotb                             [TEST] ========================================
+3476775.00ns INFO     cocotb                             Test passed with (0)criticals (0)errors (0)warnings 
+3476775.00ns INFO     cocotb                             Cycles consumed = 139071 recommened timeout = 152979 cycles
+3476775.00ns INFO     cocotb.regression                  report_test.<locals>.wrapper_func [32mpassed[49m[39m
+3476775.00ns INFO     cocotb.regression                  *****************************************************************************************************************************************************
+                                                         ** TEST                                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                         *****************************************************************************************************************************************************
+                                                         ** caravel_cocotb.interfaces.common_functions.test_functions.report_test.<locals>.wrapper_func  [32m PASS [49m[39m    3476775.00          39.03      89076.36  **
+                                                         *****************************************************************************************************************************************************
+                                                         ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                                           3476775.00          39.08      88971.02  **
+                                                         *****************************************************************************************************************************************************
+                                                         

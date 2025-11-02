@@ -1,0 +1,29 @@
+
+Magic 8.3 revision 489 - Compiled on Thu Aug 22 13:45:15 UTC 2024.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130A ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130A Device Generator Menu ...
+Loading "/nix/store/pqxyc4xmydcs5adig47yyc29r3svp5nx-python3-3.11.9-env/lib/python3.11/site-packages/librelane/scripts/magic/wrapper.tcl" from command line.
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 3.0
+Library name: user_project_wrapper
+Reading "Neuromorphic_X1_wb".
+Reading "user_project_wrapper".
+[INFO] Loading user_project_wrapper
+
+DRC style is now "drc(full)"
+Loading DRC CIF style.
+No errors found.
+[INFO] COUNT: 0
+[INFO] Should be divided by 3 or 4
+[INFO] DRC Checking DONE (/home/marcus/caravel_user_neuromorphic_comp/openlane/user_project_wrapper/runs/25_10_29_00_20/55-magic-drc/reports/drc_violations.magic.rpt)
+[INFO] Saving mag view with DRC errors (/home/marcus/caravel_user_neuromorphic_comp/openlane/user_project_wrapper/runs/25_10_29_00_20/55-magic-drc/views/user_project_wrapper.drc.mag)
+[INFO] Saved

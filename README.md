@@ -1,50 +1,40 @@
-# Neuromorphic Edge Inference Accelerator with ReRAM-based Synaptic Weight Storage
+# Extreme-Low-Power Edge Inference Accelerator with ReRAM-based Compute 
 
 **ChipFoundry BM Labs NVM Power-Up Design Contest Submission**
 
 ## Project Overview
 
-This project implements a neuromorphic computing accelerator that leverages BM Labs' ReRAM (Neuromorphic X1) for non-volatile synaptic weight storage, enabling ultra-low-power edge AI inference for medical monitoring devices, automotive driver assistance systems, or space-based sensor processing.
+This project implements a small matrix multiplication accelerator utilizing systolic arrays that, paired with BM Labs' ReRAM and Analog In-Memory Compute, enables extreme-low-power yet fast edge AI inference.
 
 ### Key Innovation Points
 
-- **Strategic NVM Integration:** Store trained neural network weights directly in ReRAM for instant-on operation
-- **Zero Boot Time:** Eliminate SRAM/DRAM power consumption with non-volatile weight retention
-- **In-Memory Analog Compute:** Leverage ReRAM's analog properties for matrix operations
-- **Medical Wearable Application:** Real-time ECG/EEG anomaly detection with 10x battery life extension
+- **Leverage Analog In-Memory Compute**: Utilize automatic quantization for low-power AI
+- **Small and Mighty**: Slim design minimizes power consumption
 
 ### Technical Highlights
 
-- 32x32 synaptic array (1024 programmable weights)
-- <10µW inference power in active mode
-- <1µW standby with full weight retention
-- <1ms inference latency for typical medical signals
-- Event-driven spiking neural network implementation
+- 8x8 byte matrix multiplication accelerator
 - Wishbone bus interface for Caravel SoC integration
+- Extreme-low-power operation
 
-## Architecture
+### Architecture
 
-**System Components:**
-- **Neuromorphic Core:** BM Labs' Neuromorphic X1_32x32 array
-- **Digital Controller:** FSM for timing and control via Wishbone
-- **Input Buffer:** Digital-to-analog conversion for sensor data
-- **Output Classifier:** Threshold detection and interrupt generation
-- **Power Management:** Intelligent sleep/wake with NVM retention
+<img src="./Extreme-Low-Power Accelerator Block Diagram.png" alt="Block Diagram" />
 
-## Get Started Quickly
+## Replicating Locally
 
-### Follow these steps to set up your environment and harden the Neuromorphic X1:
+### Follow these steps to set up your environment and harden the design:
 
 1. **Clone the Repository:**
 
 ```bash
-git clone https://github.com/BMsemi/caravel_user_Neuromorphic_X1_32x32.git
+git clone https://github.com/partcleda/caravel_user_neuromorphic_comp.git 
 ```
 
 2. **Prepare Your Environment:**
 
 ```bash
-cd caravel_user_Neuromorphic_X1_32x32
+cd caravel_user_neuromorphic_comp
 make setup
 ```
 
@@ -60,34 +50,40 @@ pip install cf-ipm
 ipm install Neuromorphic_X1_32x32
 ```
 
-5. **Harden the User Project Wrapper:**
+5. **Edit Behavioral Model Name in IP:**
+
+The cocotb simulation flow uses `verilog/includes/includes.rtl.caravel_user_project` as its source files, which includes a path to the Neuromorphic IP behavioral model. In order to avoid making a second `user_project_wrapper.v`, it is simpler to modify the behavioral model module name from `Neuromorphic_X1` to `Neuromorphic_X1_wb` to align with the stub that is used when actually hardening. With this change, the same `user_project_wrapper.v` works for both (cocotb) testbenching as well as hardening.
+
+In other words, rename line 16...
+```
+File: ip/Neuromorphic_X1_32x32/hdl/beh_model/Neuromorphic_X1_Beh.v
+16: module Neuromorphic_X1_wb (
+```
+
+6. **Run Testbenches:**
+
+```bash
+make cocotb-verify-all-rtl
+```
+
+7. **Harden the Design:**
 
 ```bash
 make user_project_wrapper
 ```
 
-6. **Harden multiple instances of IP:**
+## Application: Extreme-Low-Power AI
 
-```bash
-# Replace content of /verilog/rtl/user_project_wrapper.v with user_project_wrapper_multi_inst.v
-# Replace content of /openlane/user_project_wrapper/config.json with config_multi_inst.json
-make user_project_wrapper
-```
+This neuromorphic accelerator targets real-time inference in extremely power-limited environments:
 
-## Application: Medical Wearable Device
-
-This neuromorphic accelerator targets real-time biosignal processing:
-
-- **Real-time ECG/EEG anomaly detection** with on-device privacy
-- **Low-power operation** extending battery life 10x vs. conventional approaches
-- **Instant wake-up** with pre-loaded models (no boot time)
-- **Adaptive learning** with non-volatile weight updates
+- **Deep space, sea inference** where on-board power limited
+- **Low-cost chiplet integration** with minimal heat and cost
 
 ## Why This Design Wins
 
-**Innovation:** Novel neuromorphic approach that authentically exploits ReRAM's unique analog computing capabilities for in-memory compute, not just simple data storage.
+**Innovation:** Novel approach that exploits ReRAM's unique analog computing capabilities for in-memory compute, not just simple data storage.
 
-**Practicality:** Targets real-world medical device market with clear, measurable power/performance benefits.
+**Practicality:** Hyper-focus on minimalist efficiency simplifes design and makes for low-risk integration in any project.
 
 **Differentiation:** While most designs use NVM for basic memory, this leverages it for neural network inference acceleration.
 

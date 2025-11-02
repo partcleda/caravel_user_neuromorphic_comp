@@ -1,0 +1,11 @@
+Test                      status     start           end             duration      p/f      seed       
+RTL-ram_word              done       04:40:07(Sun)   04:40:22(Sun)   0:00:14.86    passed   1762087209
+RTL-mat_mult_version      done       04:40:22(Sun)   04:40:31(Sun)   0:00:09.01    passed   1762087223
+RTL-mat_mult_status       done       04:40:31(Sun)   04:40:40(Sun)   0:00:09.02    passed   1762087232
+RTL-mat_mult_identity     done       04:40:40(Sun)   04:41:21(Sun)   0:00:41.46    passed   1762087241
+RTL-mat_mult_unsigned     done       04:41:21(Sun)   04:41:54(Sun)   0:00:32.64    passed   1762087282
+RTL-mat_mult_reset        done       04:41:54(Sun)   04:42:04(Sun)   0:00:10.18    passed   1762087315
+RTL-mat_mult_full         done       04:42:04(Sun)   04:42:44(Sun)   0:00:40.21    passed   1762087325
+
+
+Total: passed (7)   failed (0)   unknown (0)   elapsed time (0:02:37.49)

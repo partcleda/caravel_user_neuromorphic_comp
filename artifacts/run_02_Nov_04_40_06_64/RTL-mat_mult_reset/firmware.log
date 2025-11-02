@@ -1,0 +1,71 @@
+command:docker run  --init -it --sig-proxy=true  -u $(id -u marcus):$(id -g marcus)   -v /home/marcus/caravel_rtl_fix/verilog/dv/cocotb/sim/hex_files/:/home/marcus/caravel_rtl_fix/verilog/dv/cocotb/sim/hex_files/ -v /home/marcus/caravel_rtl_fix/verilog/dv/cocotb:/home/marcus/caravel_rtl_fix/verilog/dv/cocotb -v /home/marcus/caravel_rtl_fix/caravel:/home/marcus/caravel_rtl_fix/caravel -v /home/marcus/caravel_rtl_fix/mgmt_core_wrapper:/home/marcus/caravel_rtl_fix/mgmt_core_wrapper -v /home/marcus/caravel_rtl_fix/verilog/dv/cocotb/sim/run_02_Nov_04_40_06_64/RTL-mat_mult_reset:/home/marcus/caravel_rtl_fix/verilog/dv/cocotb/sim/run_02_Nov_04_40_06_64/RTL-mat_mult_reset  -v /home/marcus/caravel_rtl_fix:/home/marcus/caravel_rtl_fix efabless/dv:cocotb sh -ec ' /opt/riscv/bin//riscv32-unknown-elf-gcc   -I/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware -I/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs -I/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/generated  -I/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/ -I/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/common -I/home/marcus/caravel_rtl_fix/verilog/dv/cocotb  -O2 -g -march=rv32i_zicsr -mabi=ilp32 -D__vexriscv__ -ffreestanding -nostdlib -Wl,-Bstatic,-T,/home/marcus/caravel_rtl_fix/verilog/dv/cocotb/sim/run_02_Nov_04_40_06_64/RTL-mat_mult_reset/linker_script.lds,--strip-debug  -o /home/marcus/caravel_rtl_fix/verilog/dv/cocotb/sim/hex_files//mat_mult_reset.elf /home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/crt0_vex.S /home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/isr.c /home/marcus/caravel_rtl_fix/verilog/dv/cocotb/user_proj_tests/mat_mult_reset/mat_mult_reset.c && /opt/riscv/bin//riscv32-unknown-elf-objdump -d -S /home/marcus/caravel_rtl_fix/verilog/dv/cocotb/sim/hex_files//mat_mult_reset.elf > /home/marcus/caravel_rtl_fix/verilog/dv/cocotb/sim/hex_files//mat_mult_reset.lst  && /opt/riscv/bin//riscv32-unknown-elf-objcopy -O verilog /home/marcus/caravel_rtl_fix/verilog/dv/cocotb/sim/hex_files//mat_mult_reset.elf /home/marcus/caravel_rtl_fix/verilog/dv/cocotb/sim/hex_files//mat_mult_reset.hex  && sed -ie "s/@10/@00/g" /home/marcus/caravel_rtl_fix/verilog/dv/cocotb/sim/hex_files//mat_mult_reset.hex'
+
+In file included from /home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/isr.c:8:
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/defs.h:273: warning: "reg_debug_2" redefined
+  273 | #define reg_debug_2 (*(volatile unsigned int*)(USER_SPACE_ADDR + USER_SPACE_SIZE))
+      | 
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/defs.h:147: note: this is the location of the previous definition
+  147 | #define reg_debug_2 (*(volatile uint32_t*)0x300FFFFC)
+      | 
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/defs.h:274: warning: "reg_debug_1" redefined
+  274 | #define reg_debug_1 (*(volatile unsigned int*)(USER_SPACE_ADDR + USER_SPACE_SIZE - 4))
+      | 
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/defs.h:146: note: this is the location of the previous definition
+  146 | #define reg_debug_1 (*(volatile uint32_t*)0x300FFFF8)
+      | 
+In file included from /home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/firmware_apis.h:7,
+                 from /home/marcus/caravel_rtl_fix/verilog/dv/cocotb/user_proj_tests/mat_mult_reset/mat_mult_reset.c:7:
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/defs.h:273: warning: "reg_debug_2" redefined
+  273 | #define reg_debug_2 (*(volatile unsigned int*)(USER_SPACE_ADDR + USER_SPACE_SIZE))
+      | 
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/defs.h:147: note: this is the location of the previous definition
+  147 | #define reg_debug_2 (*(volatile uint32_t*)0x300FFFFC)
+      | 
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/defs.h:274: warning: "reg_debug_1" redefined
+  274 | #define reg_debug_1 (*(volatile unsigned int*)(USER_SPACE_ADDR + USER_SPACE_SIZE - 4))
+      | 
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/defs.h:146: note: this is the location of the previous definition
+  146 | #define reg_debug_1 (*(volatile uint32_t*)0x300FFFF8)
+      | 
+In file included from /home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/firmware_apis.h:12:
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/gpios.h: In function 'GPIOs_writeLowHigh':
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/gpios.h:198:27: warning: left shift count >= width of type [-Wshift-count-overflow]
+  198 |     reg_mprj_datah = data <<32;
+      |                           ^~
+In file included from /home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/firmware_apis.h:13:
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/timer0.h: In function 'timer0_configureOneShot':
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/timer0.h:15:9: warning: implicit declaration of function 'timer0_enable'; did you mean 'timer0_en_write'? [-Wimplicit-function-declaration]
+   15 |         timer0_enable(0); // disable
+      |         ^~~~~~~~~~~~~
+      |         timer0_en_write
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/timer0.h: At top level:
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/timer0.h:38:6: warning: conflicting types for 'timer0_enable'; have 'void(_Bool)'
+   38 | void timer0_enable(bool is_enable){
+      |      ^~~~~~~~~~~~~
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/timer0.h:15:9: note: previous implicit declaration of 'timer0_enable' with type 'void(_Bool)'
+   15 |         timer0_enable(0); // disable
+      |         ^~~~~~~~~~~~~
+In file included from /home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/firmware_apis.h:14:
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/mgmt_gpio.h: In function 'ManagmentGpio_inputEnable':
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/mgmt_gpio.h:22:5: warning: implicit declaration of function 'dummyDelay' [-Wimplicit-function-declaration]
+   22 |     dummyDelay(1);
+      |     ^~~~~~~~~~
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/firmware_apis.h: In function 'enable_debug':
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/firmware_apis.h:23:5: warning: implicit declaration of function 'User_enableIF' [-Wimplicit-function-declaration]
+   23 |     User_enableIF();
+      |     ^~~~~~~~~~~~~
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/firmware_apis.h: At top level:
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/firmware_apis.h:91:6: warning: conflicting types for 'dummyDelay'; have 'void(int)'
+   91 | void dummyDelay(int num){
+      |      ^~~~~~~~~~
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/mgmt_gpio.h:22:5: note: previous implicit declaration of 'dummyDelay' with type 'void(int)'
+   22 |     dummyDelay(1);
+      |     ^~~~~~~~~~
+In file included from /home/marcus/caravel_rtl_fix/verilog/dv/cocotb/user_proj_tests/mat_mult_reset/mat_mult_reset.c:8:
+/home/marcus/caravel_rtl_fix/verilog/dv/cocotb/custom_user_space.h:21:6: warning: conflicting types for 'User_enableIF'; have 'void()'
+   21 | void User_enableIF(){
+      |      ^~~~~~~~~~~~~
+/home/marcus/caravel_rtl_fix/mgmt_core_wrapper/verilog/dv/firmware/APIs/firmware_apis.h:23:5: note: previous implicit declaration of 'User_enableIF' with type 'void()'
+   23 |     User_enableIF();
+      |     ^~~~~~~~~~~~~
+Pass: hex generation

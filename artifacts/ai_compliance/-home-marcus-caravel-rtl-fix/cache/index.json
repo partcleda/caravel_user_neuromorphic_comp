@@ -1,0 +1,110 @@
+{
+  "version": "0.7.0",
+  "cache_created": "2025-11-02T05:16:14.140819",
+  "last_updated": "2025-11-02T05:16:14.158919",
+  "project_path": "/home/marcus/.claude/projects/-home-marcus-caravel-rtl-fix",
+  "cached_files": {
+    "fe73a2da-e25b-4581-b934-8ce20a5d762f.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-rtl-fix/fe73a2da-e25b-4581-b934-8ce20a5d762f.jsonl",
+      "source_mtime": 1762076543.0804477,
+      "cached_mtime": 1762089374.1402686,
+      "message_count": 5,
+      "session_ids": [
+        "fe73a2da-e25b-4581-b934-8ce20a5d762f"
+      ]
+    },
+    "agent-60e4ebc3.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-rtl-fix/agent-60e4ebc3.jsonl",
+      "source_mtime": 1762076271.2787936,
+      "cached_mtime": 1762089374.1402686,
+      "message_count": 2,
+      "session_ids": [
+        "fe73a2da-e25b-4581-b934-8ce20a5d762f"
+      ]
+    },
+    "agent-cf02bf68.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-rtl-fix/agent-cf02bf68.jsonl",
+      "source_mtime": 1762076274.855789,
+      "cached_mtime": 1762089374.1412685,
+      "message_count": 2,
+      "session_ids": [
+        "fe73a2da-e25b-4581-b934-8ce20a5d762f"
+      ]
+    },
+    "21be6f1f-585b-43fe-80f4-9da34e1eb7c8.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-rtl-fix/21be6f1f-585b-43fe-80f4-9da34e1eb7c8.jsonl",
+      "source_mtime": 1762086544.0431232,
+      "cached_mtime": 1762089374.1552687,
+      "message_count": 251,
+      "session_ids": [
+        "fe73a2da-e25b-4581-b934-8ce20a5d762f",
+        "21be6f1f-585b-43fe-80f4-9da34e1eb7c8"
+      ]
+    },
+    "agent-dec42415.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-rtl-fix/agent-dec42415.jsonl",
+      "source_mtime": 1762076564.7524202,
+      "cached_mtime": 1762089374.1552687,
+      "message_count": 2,
+      "session_ids": [
+        "21be6f1f-585b-43fe-80f4-9da34e1eb7c8"
+      ]
+    },
+    "agent-d902d008.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-rtl-fix/agent-d902d008.jsonl",
+      "source_mtime": 1762076569.2874143,
+      "cached_mtime": 1762089374.1552687,
+      "message_count": 2,
+      "session_ids": [
+        "21be6f1f-585b-43fe-80f4-9da34e1eb7c8"
+      ]
+    },
+    "agent-03fa59dd.jsonl": {
+      "file_path": "/home/marcus/.claude/projects/-home-marcus-caravel-rtl-fix/agent-03fa59dd.jsonl",
+      "source_mtime": 1762079527.9596026,
+      "cached_mtime": 1762089374.1572685,
+      "message_count": 31,
+      "session_ids": [
+        "21be6f1f-585b-43fe-80f4-9da34e1eb7c8"
+      ]
+    }
+  },
+  "total_message_count": 295,
+  "total_input_tokens": 260,
+  "total_output_tokens": 15741,
+  "total_cache_creation_tokens": 597920,
+  "total_cache_read_tokens": 8028767,
+  "sessions": {
+    "fe73a2da-e25b-4581-b934-8ce20a5d762f": {
+      "session_id": "fe73a2da-e25b-4581-b934-8ce20a5d762f",
+      "summary": null,
+      "first_timestamp": "2025-11-02T09:37:47.383Z",
+      "last_timestamp": "2025-11-02T09:42:23.070Z",
+      "message_count": 10,
+      "first_user_message": "Warmup",
+      "cwd": "/home/marcus/caravel_rtl_fix",
+      "total_input_tokens": 9,
+      "total_output_tokens": 485,
+      "total_cache_creation_tokens": 58441,
+      "total_cache_read_tokens": 12112
+    },
+    "21be6f1f-585b-43fe-80f4-9da34e1eb7c8": {
+      "session_id": "21be6f1f-585b-43fe-80f4-9da34e1eb7c8",
+      "summary": "Matrix Multiplication Done Signal Persistence Issue",
+      "first_timestamp": "2025-11-02T09:42:14.442Z",
+      "last_timestamp": "2025-11-02T12:29:04.021Z",
+      "message_count": 284,
+      "first_user_message": "Warmup",
+      "cwd": "/home/marcus/caravel_rtl_fix",
+      "total_input_tokens": 251,
+      "total_output_tokens": 15256,
+      "total_cache_creation_tokens": 539479,
+      "total_cache_read_tokens": 8016655
+    }
+  },
+  "working_directories": [
+    "/home/marcus/caravel_rtl_fix"
+  ],
+  "earliest_timestamp": "2025-11-02T09:37:47.383Z",
+  "latest_timestamp": "2025-11-02T12:29:04.021Z"
+}

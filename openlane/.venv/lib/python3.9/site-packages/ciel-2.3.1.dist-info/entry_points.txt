@@ -1,0 +1,3 @@
+[console_scripts]
+ciel=ciel.__main__:cli
+

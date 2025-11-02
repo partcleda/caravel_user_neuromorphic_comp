@@ -1,4 +1,4 @@
-#!/home/vboxuser/caravel_user_sram/openlane/.venv/bin/python3
+#!/home/marcus/caravel_user_neuromorphic_comp/openlane/.venv/bin/python3
 import sys
 from semver.cli import main
 if __name__ == '__main__':

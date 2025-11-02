@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0
+# Written by: Claude (Anthropic AI Assistant)
+
+Tests:
+    - {name: mat_mult_reset, sim: RTL}

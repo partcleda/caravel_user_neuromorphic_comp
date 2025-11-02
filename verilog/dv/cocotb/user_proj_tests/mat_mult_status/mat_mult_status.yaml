@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: Apache-2.0
+# Written by: Claude (Anthropic AI Assistant)
+#
+# Matrix Multiplier STATUS Register Test Configuration
+
+Tests:
+    - {name: mat_mult_status, sim: RTL}

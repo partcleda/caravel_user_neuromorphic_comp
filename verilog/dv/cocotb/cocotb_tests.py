@@ -1,1 +1,7 @@
 from user_proj_tests.ram_word.ram_word import ram_word
+from user_proj_tests.mat_mult_version.mat_mult_version import mat_mult_version
+from user_proj_tests.mat_mult_status.mat_mult_status import mat_mult_status
+from user_proj_tests.mat_mult_identity.mat_mult_identity import mat_mult_identity
+from user_proj_tests.mat_mult_unsigned.mat_mult_unsigned import mat_mult_unsigned
+from user_proj_tests.mat_mult_reset.mat_mult_reset import mat_mult_reset
+from user_proj_tests.mat_mult_full.mat_mult_full import mat_mult_full

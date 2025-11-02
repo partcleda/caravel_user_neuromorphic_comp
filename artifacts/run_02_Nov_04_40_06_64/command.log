@@ -1,0 +1,2 @@
+command used to run this sim:
+% /home/marcus/caravel_rtl_fix/venv-cocotb/bin/caravel_cocotb -tl user_proj_tests/user_proj_tests.yaml

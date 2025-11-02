@@ -2,7 +2,8 @@
   "//": "Design files",
   "VERILOG_FILES": [
     "dir::../../verilog/rtl/defines.v",
-    "dir::../../verilog/rtl/user_project_wrapper.v"
+    "dir::../../verilog/rtl/user_project_wrapper.v",
+    "dir::../../verilog/rtl/mat_mult_wb.v"
   ],
 
   "MAGIC_EXT_USE_GDS": true,
@@ -13,18 +14,17 @@
 
   "PNR_SDC_FILE": "dir::signoff.sdc",
 
-  "//": "Hardening strategy variables (1-Macro-First Hardening)",
-  "SYNTH_ELABORATE_ONLY": true,
-  "RUN_POST_GPL_DESIGN_REPAIR": false,
-  "RUN_POST_CTS_RESIZER_TIMING": false,
-  "DESIGN_REPAIR_BUFFER_INPUT_PORTS": false,
-  "FP_PDN_ENABLE_RAILS": false,
-  "RUN_ANTENNA_REPAIR": false,
-  "RUN_FILL_INSERTION": false,
-  "RUN_TAP_ENDCAP_INSERTION": false,
-  "RUN_CTS": false,
+  "//": "Hardening strategy variables (this is for 3-Top-Level Integration). Visit https://docs.google.com/document/d/1pf-wbpgjeNEM-1TcvX2OJTkHjqH_C9p-LURCASS0Zo8 for more info",
+  "SYNTH_ELABORATE_ONLY": false,
+  "RUN_POST_GPL_DESIGN_REPAIR": true,
+  "RUN_POST_CTS_RESIZER_TIMING": true,
+  "DESIGN_REPAIR_BUFFER_INPUT_PORTS": true,
+  "FP_PDN_ENABLE_RAILS": true,
+  "RUN_ANTENNA_REPAIR": true,
+  "RUN_FILL_INSERTION": true,
+  "RUN_TAP_ENDCAP_INSERTION": true,
+  "RUN_CTS": true,
   "RUN_IRDROP_REPORT": false,
-  "ERROR_ON_SYNTH_CHECKS": false,
 
   "//": "Use custom PDN (compat script: set_voltage_domain + pdngen; no PDN_* envs)",
   "FP_PDN_CFG": "dir::pdn_override_2.tcl",
@@ -41,7 +41,7 @@
       "gds": ["dir::../../gds/Neuromorphic_X1_wb.gds"],
       "lef": ["dir::../../lef/Neuromorphic_X1_wb.lef"],
       "instances": {
-        "mprj": { "location": [515.18, 514.24], "orientation": "N" }
+        "neuro_inst": { "location": [515.18, 514.24], "orientation": "N" }
       },
       "lib": { "*": "dir::../../lib/Neuromorphic_X1_wb.lib" }
     }
@@ -49,8 +49,8 @@
 
   "//": "Hook macro power pins to Caravel rails (keep consistent with RTL)",
   "PDN_MACRO_CONNECTIONS": [
-    "mprj vccd1 vssd1 VDDC VSS",
-    "mprj vdda1 vssd1 VDDA VSS"
+    "neuro_inst vccd1 vssd1 VDDC VSS",
+    "neuro_inst vdda1 vssd1 VDDA VSS"
   ],
 
   "//": "PDN configurations (straps that land on your met3 pins)",
