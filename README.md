@@ -17,6 +17,10 @@ This project implements a small matrix multiplication accelerator utilizing syst
 - Wishbone bus interface for Caravel SoC integration
 - Extreme-low-power operation
 
+### Architecture
+
+<img src="./Extreme-Low-Power Accelerator Block Diagram.png" alt="Block Diagram" />
+
 ## Get Started Quickly
 
 ### Follow these steps to set up your environment and harden the design:
