@@ -46,9 +46,9 @@ add_pdn_stripe -grid core -layer met1 -width 0.48 -offset 80 -followpins -starts
 add_pdn_stripe -grid core -layer met2 -width 1.6 -pitch 2800 -offset 100 -starts_with POWER
 
 # 5) Power distribution on upper metals
-add_pdn_stripe -grid core -layer met3 -width 6 -pitch 180 -offset 20 -starts_with POWER -extend_to_core_ring
-add_pdn_stripe -grid core -layer met4 -width 6 -pitch 180 -offset 20 -starts_with POWER -extend_to_core_ring
-add_pdn_stripe -grid core -layer met5 -width 6 -pitch 180 -offset 46 -starts_with POWER -extend_to_core_ring
+add_pdn_stripe -grid core -layer met3 -width 4 -pitch 180 -offset 20 -starts_with POWER -extend_to_core_ring
+add_pdn_stripe -grid core -layer met4 -width 4 -pitch 180 -offset 20 -starts_with POWER -extend_to_core_ring
+add_pdn_stripe -grid core -layer met5 -width 4 -pitch 180 -offset 46 -starts_with POWER -extend_to_core_ring
 
 # 6) Macro grid
 define_pdn_grid -macro -default -name macro -starts_with POWER -halo "5 5"
