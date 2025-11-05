@@ -7,10 +7,8 @@
   ],
 
   "MAGIC_EXT_USE_GDS": true,
+  "MAGIC_EXT_ABSTRACT_CELLS": ["Neuromorphic_X1_wb"],
 
-  "EXTRA_VERILOG_MODELS": [
-    "dir::../../ip/Neuromorphic_X1_32x32/hdl/NEUROMORPHIC_X1_stub.v"
-  ],
 
   "PNR_SDC_FILE": "dir::signoff.sdc",
 
@@ -19,6 +17,12 @@
   "RUN_POST_GPL_DESIGN_REPAIR": true,
   "RUN_POST_CTS_RESIZER_TIMING": true,
   "DESIGN_REPAIR_BUFFER_INPUT_PORTS": true,
+
+  "//": "Hold fixing parameters",
+  "PL_RESIZER_HOLD_SLACK_MARGIN": 2.0,
+  "GLB_RESIZER_HOLD_SLACK_MARGIN": 1.0,
+  "PL_RESIZER_HOLD_MAX_BUFFER_PERCENT": 50,
+  "GLB_RESIZER_HOLD_MAX_BUFFER_PERCENT": 70,
   "FP_PDN_ENABLE_RAILS": true,
   "RUN_ANTENNA_REPAIR": true,
   "RUN_FILL_INSERTION": true,
@@ -38,10 +42,11 @@
   "//": "Macros configurations",
   "MACROS": {
     "Neuromorphic_X1_wb": {
+      "vh": ["dir::../../ip/Neuromorphic_X1_32x32/hdl/NEUROMORPHIC_X1_stub.v"],
       "gds": ["dir::../../gds/Neuromorphic_X1_wb.gds"],
       "lef": ["dir::../../lef/Neuromorphic_X1_wb.lef"],
       "instances": {
-        "neuro_inst": { "location": [1000.0, 1000.0], "orientation": "N" }
+        "neuro_inst": { "location": [1900.0, 900.0], "orientation": "N" }
       },
       "lib": { "*": "dir::../../lib/Neuromorphic_X1_wb.lib" }
     }
@@ -79,11 +84,11 @@
   "ERROR_ON_MAGIC_DRC": false,
 
   "DRT_THREADS": 40,
-  "PL_TARGET_DENSITY_PCT": 30,
+  "PL_TARGET_DENSITY_PCT": 8,
   "MAX_TRANSITION_CONSTRAINT": 1.5,
 
   "//": "Allow routing congestion to proceed past global routing",
-  "GRT_ALLOW_CONGESTION": true,
+  "GRT_ALLOW_CONGESTION": false,
   "GRT_OVERFLOW_ITERS": 150,
 
   "//": "Will ignore synth",
