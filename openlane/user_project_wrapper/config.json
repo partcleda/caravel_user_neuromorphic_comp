@@ -9,7 +9,6 @@
   "MAGIC_EXT_USE_GDS": true,
   "MAGIC_EXT_ABSTRACT_CELLS": ["Neuromorphic_X1_wb"],
 
-
   "PNR_SDC_FILE": "dir::signoff.sdc",
 
   "//": "Hardening strategy variables (this is for 3-Top-Level Integration). Visit https://docs.google.com/document/d/1pf-wbpgjeNEM-1TcvX2OJTkHjqH_C9p-LURCASS0Zo8 for more info",
@@ -84,8 +83,15 @@
   "ERROR_ON_MAGIC_DRC": false,
 
   "DRT_THREADS": 40,
-  "PL_TARGET_DENSITY_PCT": 8,
+  "PL_TARGET_DENSITY_PCT": 20,
   "MAX_TRANSITION_CONSTRAINT": 1.5,
+
+  "//": "Try to fix antenna errors, following https://librelane.readthedocs.io/en/latest/usage/caravel/index.html#openroad-checkantennas",
+  "GRT_ANTENNA_ITERS": 10,
+  "GRT_ANTENNA_MARGIN": 15,
+  "RUN_HEURISTIC_DIODE_INSERTION": true,
+  "DESIGN_REPAIR_MAX_WIRE_LENGTH": 800,
+  "PL_WIRE_LENGTH_COEF": 0.05,
 
   "//": "Allow routing congestion to proceed past global routing",
   "GRT_ALLOW_CONGESTION": false,
