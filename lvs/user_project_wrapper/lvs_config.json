@@ -8,7 +8,8 @@
 		"*__fill_*",
 		"*__fakediode_*",
 		"*__tapvpwrvgnd_*",
-		"CF_SRAM_1024x32"
+		"CF_SRAM_1024x32",
+		"Neuromorphic_X1_wb"
 	],
 	"LVS_FLATTEN": [
 		""
