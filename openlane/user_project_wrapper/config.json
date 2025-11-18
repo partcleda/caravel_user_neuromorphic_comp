@@ -58,22 +58,19 @@
     "neuro_inst vdda1 vssd1 VDDA VSS"
   ],
 
+  "//": "Specify halo around macros",
+  "FP_MACRO_HORIZONTAL_HALO": 5,
+  "FP_MACRO_VERTICAL_HALO": 5,
+
   "//": "PDN configurations (straps that land on your met3 pins)",
-  "FP_PDN_VPITCH": 180,
-  "FP_PDN_HPITCH": 180,
-  "FP_PDN_VOFFSET": 20,
-  "FP_PDN_HOFFSET": 46,
-  "FP_PDN_VWIDTH": 6.0,
-  "FP_PDN_HWIDTH": 6.0,
-  "FP_PDN_VSPACING": 15.5,
-  "FP_PDN_HSPACING": 15.5,
+  "//": "prev config: 180, 180, 20, 46, 6, 6, 15.5, 15.5",
 
   "//": "Core ring inside die bounds",
   "FP_PDN_CORE_RING": true,
   "FP_PDN_CORE_RING_VWIDTH": 3.1,
   "FP_PDN_CORE_RING_HWIDTH": 3.1,
-  "FP_PDN_CORE_RING_VOFFSET": 8.0,
-  "FP_PDN_CORE_RING_HOFFSET": 8.0,
+  "FP_PDN_CORE_RING_VOFFSET": 12.45,
+  "FP_PDN_CORE_RING_HOFFSET": 12.45,
   "FP_PDN_CORE_RING_VSPACING": 1.7,
   "FP_PDN_CORE_RING_HSPACING": 1.7,
 
@@ -106,8 +103,8 @@
   "DIE_AREA": [0, 0, 2920, 3520],
   "FP_DEF_TEMPLATE": "dir::fixed_dont_change/user_project_wrapper.def",
 
-  "VDD_NETS": ["vccd1", "vdda1"],
-  "GND_NETS": ["vssd1"],
+  "VDD_NETS": ["vccd1", "vdda1", "vccd2", "vdda2"],
+  "GND_NETS": ["vssd1", "vssa1", "vssd2", "vssa2"],
 
   "CLOCK_PORT": "wb_clk_i",
   "SIGNOFF_SDC_FILE": "dir::signoff.sdc",
