@@ -152,9 +152,12 @@ module user_project_wrapper #(
     // Connect matrix multiplier IRQ to user_irq[0]
     assign user_irq = {2'b00, irq_matmul};
 
+    // https://chipfoundry.io/knowledge-base/connecting-gpios
+    // Make sure to drive `io_oeb[0]` low to enable pin 0 as output
+    assign io_oeb = {(`MPRJ_IO_PADS-1){1'b1}, 1'b0};
+
     // Tie off unused outputs
-    assign la_data_out             = 128'b0;
-    assign io_oeb                  = {`MPRJ_IO_PADS{1'b1}};
+    assign la_data_out               = 128'b0;
     assign io_out[`MPRJ_IO_PADS-1:1] = {(`MPRJ_IO_PADS-1){1'b0}};
     // Note: io_out partially driven by neuro_inst.ScanOutCC
 

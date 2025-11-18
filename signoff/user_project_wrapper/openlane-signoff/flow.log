@@ -1,26 +1,26 @@
 Starting…
-Running 'Verilator.Lint' at 'user_project_wrapper/runs/25_11_12_16_59/01-verilator-lint'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/01-verilator-lint/verilator-lint.log'[/repr.filename]…
-Running 'Checker.LintTimingConstructs' at 'user_project_wrapper/runs/25_11_12_16_59/02-checker-linttimingconstructs'…
+Running 'Verilator.Lint' at 'user_project_wrapper/runs/25_11_17_11_40/01-verilator-lint'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/01-verilator-lint/verilator-lint.log'[/repr.filename]…
+Running 'Checker.LintTimingConstructs' at 'user_project_wrapper/runs/25_11_17_11_40/02-checker-linttimingconstructs'…
 Check for Lint Timing Errors clear.
-Running 'Checker.LintErrors' at 'user_project_wrapper/runs/25_11_12_16_59/03-checker-linterrors'…
+Running 'Checker.LintErrors' at 'user_project_wrapper/runs/25_11_17_11_40/03-checker-linterrors'…
 Check for Lint errors clear.
-Running 'Checker.LintWarnings' at 'user_project_wrapper/runs/25_11_12_16_59/04-checker-lintwarnings'…
+Running 'Checker.LintWarnings' at 'user_project_wrapper/runs/25_11_17_11_40/04-checker-lintwarnings'…
 455 Lint warnings found.
-Running 'Yosys.JsonHeader' at 'user_project_wrapper/runs/25_11_12_16_59/05-yosys-jsonheader'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/05-yosys-jsonheader/yosys-jsonheader.log'[/repr.filename]…
-Running 'Yosys.Synthesis' at 'user_project_wrapper/runs/25_11_12_16_59/06-yosys-synthesis'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/06-yosys-synthesis/yosys-synthesis.log'[/repr.filename]…
+Running 'Yosys.JsonHeader' at 'user_project_wrapper/runs/25_11_17_11_40/05-yosys-jsonheader'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/05-yosys-jsonheader/yosys-jsonheader.log'[/repr.filename]…
+Running 'Yosys.Synthesis' at 'user_project_wrapper/runs/25_11_17_11_40/06-yosys-synthesis'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/06-yosys-synthesis/yosys-synthesis.log'[/repr.filename]…
 Parsing synthesis checks…
-Running 'Checker.YosysUnmappedCells' at 'user_project_wrapper/runs/25_11_12_16_59/07-checker-yosysunmappedcells'…
+Running 'Checker.YosysUnmappedCells' at 'user_project_wrapper/runs/25_11_17_11_40/07-checker-yosysunmappedcells'…
 Check for Unmapped Yosys instances clear.
-Running 'Checker.YosysSynthChecks' at 'user_project_wrapper/runs/25_11_12_16_59/08-checker-yosyssynthchecks'…
+Running 'Checker.YosysSynthChecks' at 'user_project_wrapper/runs/25_11_17_11_40/08-checker-yosyssynthchecks'…
 Check for Yosys check errors clear.
-Running 'Checker.NetlistAssignStatements' at 'user_project_wrapper/runs/25_11_12_16_59/09-checker-netlistassignstatements'…
-Running 'OpenROAD.CheckSDCFiles' at 'user_project_wrapper/runs/25_11_12_16_59/10-openroad-checksdcfiles'…
-Running 'OpenROAD.CheckMacroInstances' at 'user_project_wrapper/runs/25_11_12_16_59/11-openroad-checkmacroinstances'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/11-openroad-checkmacroinstances/openroad-checkmacroinstances.log'[/repr.filename]…
-Running 'OpenROAD.STAPrePNR' at 'user_project_wrapper/runs/25_11_12_16_59/12-openroad-staprepnr'…
+Running 'Checker.NetlistAssignStatements' at 'user_project_wrapper/runs/25_11_17_11_40/09-checker-netlistassignstatements'…
+Running 'OpenROAD.CheckSDCFiles' at 'user_project_wrapper/runs/25_11_17_11_40/10-openroad-checksdcfiles'…
+Running 'OpenROAD.CheckMacroInstances' at 'user_project_wrapper/runs/25_11_17_11_40/11-openroad-checkmacroinstances'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/11-openroad-checkmacroinstances/openroad-checkmacroinstances.log'[/repr.filename]…
+Running 'OpenROAD.STAPrePNR' at 'user_project_wrapper/runs/25_11_17_11_40/12-openroad-staprepnr'…
 Starting STA for the nom_tt_025C_1v80 timing corner…
 Starting STA for the nom_ss_100C_1v60 timing corner…
 Starting STA for the nom_ff_n40C_1v95 timing corner…
@@ -29,88 +29,96 @@ Skipping corner min_ss_100C_1v60 for STA (identical to nom_ss_100C_1v60 at this 
 Skipping corner min_ff_n40C_1v95 for STA (identical to nom_ff_n40C_1v95 at this stage)…
 Skipping corner max_tt_025C_1v80 for STA (identical to nom_tt_025C_1v80 at this stage)…
 Skipping corner max_ss_100C_1v60 for STA (identical to nom_ss_100C_1v60 at this stage)…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/12-openroad-staprepnr/nom_tt_025C_1v80/sta.log'[/repr.filename]…
 Skipping corner max_ff_n40C_1v95 for STA (identical to nom_ff_n40C_1v95 at this stage)…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/12-openroad-staprepnr/nom_ss_100C_1v60/sta.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/12-openroad-staprepnr/nom_ff_n40C_1v95/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/12-openroad-staprepnr/nom_ff_n40C_1v95/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/12-openroad-staprepnr/nom_tt_025C_1v80/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/12-openroad-staprepnr/nom_ss_100C_1v60/sta.log'[/repr.filename]…
 Finished STA for the nom_ff_n40C_1v95 timing corner.
-Finished STA for the nom_tt_025C_1v80 timing corner.
 Finished STA for the nom_ss_100C_1v60 timing corner.
-Running 'OpenROAD.Floorplan' at 'user_project_wrapper/runs/25_11_12_16_59/13-openroad-floorplan'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/13-openroad-floorplan/openroad-floorplan.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-Running 'Odb.CheckMacroAntennaProperties' at 'user_project_wrapper/runs/25_11_12_16_59/14-odb-checkmacroantennaproperties'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/14-odb-checkmacroantennaproperties/odb-checkmacroantennaproperties.log'[/repr.filename]…
+Finished STA for the nom_tt_025C_1v80 timing corner.
+Running 'OpenROAD.Floorplan' at 'user_project_wrapper/runs/25_11_17_11_40/13-openroad-floorplan'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/13-openroad-floorplan/openroad-floorplan.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'Odb.CheckMacroAntennaProperties' at 'user_project_wrapper/runs/25_11_17_11_40/14-odb-checkmacroantennaproperties'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/14-odb-checkmacroantennaproperties/odb-checkmacroantennaproperties.log'[/repr.filename]…
 Cell 'Neuromorphic_X1_wb' has (91) input pin(s) without antenna gate information. They might not be connected to a gate.
 Cell 'Neuromorphic_X1_wb' has (34) output pin(s) without antenna diffusion information. They might not be driven.
-Running 'Odb.SetPowerConnections' at 'user_project_wrapper/runs/25_11_12_16_59/15-odb-setpowerconnections'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/15-odb-setpowerconnections/odb-setpowerconnections.log'[/repr.filename]…
-Running 'Odb.ManualMacroPlacement' at 'user_project_wrapper/runs/25_11_12_16_59/16-odb-manualmacroplacement'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/16-odb-manualmacroplacement/odb-manualmacroplacement.log'[/repr.filename]…
-Running 'OpenROAD.CutRows' at 'user_project_wrapper/runs/25_11_12_16_59/17-openroad-cutrows'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/17-openroad-cutrows/openroad-cutrows.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-Running 'OpenROAD.TapEndcapInsertion' at 'user_project_wrapper/runs/25_11_12_16_59/18-openroad-tapendcapinsertion'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/18-openroad-tapendcapinsertion/openroad-tapendcapinsertion.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-Running 'Odb.AddPDNObstructions' at 'user_project_wrapper/runs/25_11_12_16_59/19-odb-addpdnobstructions'…
+Running 'Odb.SetPowerConnections' at 'user_project_wrapper/runs/25_11_17_11_40/15-odb-setpowerconnections'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/15-odb-setpowerconnections/odb-setpowerconnections.log'[/repr.filename]…
+Running 'Odb.ManualMacroPlacement' at 'user_project_wrapper/runs/25_11_17_11_40/16-odb-manualmacroplacement'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/16-odb-manualmacroplacement/odb-manualmacroplacement.log'[/repr.filename]…
+Running 'OpenROAD.CutRows' at 'user_project_wrapper/runs/25_11_17_11_40/17-openroad-cutrows'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/17-openroad-cutrows/openroad-cutrows.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'OpenROAD.TapEndcapInsertion' at 'user_project_wrapper/runs/25_11_17_11_40/18-openroad-tapendcapinsertion'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/18-openroad-tapendcapinsertion/openroad-tapendcapinsertion.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'Odb.AddPDNObstructions' at 'user_project_wrapper/runs/25_11_17_11_40/19-odb-addpdnobstructions'…
 'PDN_OBSTRUCTIONS' is not defined. Skipping 'Odb.AddPDNObstructions'…
-Running 'OpenROAD.GeneratePDN' at 'user_project_wrapper/runs/25_11_12_16_59/20-openroad-generatepdn'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/20-openroad-generatepdn/openroad-generatepdn.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'OpenROAD.GeneratePDN' at 'user_project_wrapper/runs/25_11_17_11_40/20-openroad-generatepdn'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/20-openroad-generatepdn/openroad-generatepdn.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [PDN-0239] Core ring shape falls outside the die bounds.
-Running 'Odb.RemovePDNObstructions' at 'user_project_wrapper/runs/25_11_12_16_59/21-odb-removepdnobstructions'…
+Running 'Odb.RemovePDNObstructions' at 'user_project_wrapper/runs/25_11_17_11_40/21-odb-removepdnobstructions'…
 'PDN_OBSTRUCTIONS' is not defined. Skipping 'Odb.RemovePDNObstructions'…
-Running 'Odb.AddRoutingObstructions' at 'user_project_wrapper/runs/25_11_12_16_59/22-odb-addroutingobstructions'…
+Running 'Odb.AddRoutingObstructions' at 'user_project_wrapper/runs/25_11_17_11_40/22-odb-addroutingobstructions'…
 'ROUTING_OBSTRUCTIONS' is not defined. Skipping 'Odb.AddRoutingObstructions'…
-Running 'OpenROAD.GlobalPlacementSkipIO' at 'user_project_wrapper/runs/25_11_12_16_59/23-openroad-globalplacementskipio'…
-I/O pins were loaded from /home/marcus/caravel_user_neuromorphic_comp/openlane/user_project_wrapper/fixed_dont_change/user_project_wrapper.def. Skipping the first global placement iteration…
-Running 'OpenROAD.IOPlacement' at 'user_project_wrapper/runs/25_11_12_16_59/24-openroad-ioplacement'…
-I/O pins were loaded from /home/marcus/caravel_user_neuromorphic_comp/openlane/user_project_wrapper/fixed_dont_change/user_project_wrapper.def. Skipping OpenROAD.IOPlacement…
-Running 'Odb.CustomIOPlacement' at 'user_project_wrapper/runs/25_11_12_16_59/25-odb-customioplacement'…
+Running 'OpenROAD.GlobalPlacementSkipIO' at 'user_project_wrapper/runs/25_11_17_11_40/23-openroad-globalplacementskipio'…
+I/O pins were loaded from /home/marcus/caravel_pdn_overhaul/openlane/user_project_wrapper/fixed_dont_change/user_project_wrapper.def. Skipping the first global placement iteration…
+Running 'OpenROAD.IOPlacement' at 'user_project_wrapper/runs/25_11_17_11_40/24-openroad-ioplacement'…
+I/O pins were loaded from /home/marcus/caravel_pdn_overhaul/openlane/user_project_wrapper/fixed_dont_change/user_project_wrapper.def. Skipping OpenROAD.IOPlacement…
+Running 'Odb.CustomIOPlacement' at 'user_project_wrapper/runs/25_11_17_11_40/25-odb-customioplacement'…
 No custom floorplan file configured, skipping…
-Running 'Odb.ApplyDEFTemplate' at 'user_project_wrapper/runs/25_11_12_16_59/26-odb-applydeftemplate'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/26-odb-applydeftemplate/odb-applydeftemplate.log'[/repr.filename]…
-Running 'OpenROAD.GlobalPlacement' at 'user_project_wrapper/runs/25_11_12_16_59/27-openroad-globalplacement'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/27-openroad-globalplacement/openroad-globalplacement.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-Running 'Odb.WriteVerilogHeader' at 'user_project_wrapper/runs/25_11_12_16_59/28-odb-writeverilogheader'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/28-odb-writeverilogheader/odb-writeverilogheader.log'[/repr.filename]…
-Running 'Checker.PowerGridViolations' at 'user_project_wrapper/runs/25_11_12_16_59/29-checker-powergridviolations'…
+Running 'Odb.ApplyDEFTemplate' at 'user_project_wrapper/runs/25_11_17_11_40/26-odb-applydeftemplate'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/26-odb-applydeftemplate/odb-applydeftemplate.log'[/repr.filename]…
+Bterm vssa2 is declared as a 'GROUND' pin. It will be ignored.
+Bterm vdda2 is declared as a 'POWER' pin. It will be ignored.
+Bterm vssd2 is declared as a 'GROUND' pin. It will be ignored.
+Bterm vccd2 is declared as a 'POWER' pin. It will be ignored.
+Bterm vssa1 is declared as a 'GROUND' pin. It will be ignored.
+Bterm vdda1 is declared as a 'POWER' pin. It will be ignored.
+Bterm vssd1 is declared as a 'GROUND' pin. It will be ignored.
+Bterm vccd1 is declared as a 'POWER' pin. It will be ignored.
+Running 'OpenROAD.GlobalPlacement' at 'user_project_wrapper/runs/25_11_17_11_40/27-openroad-globalplacement'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/27-openroad-globalplacement/openroad-globalplacement.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'Odb.WriteVerilogHeader' at 'user_project_wrapper/runs/25_11_17_11_40/28-odb-writeverilogheader'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/28-odb-writeverilogheader/odb-writeverilogheader.log'[/repr.filename]…
+Running 'Checker.PowerGridViolations' at 'user_project_wrapper/runs/25_11_17_11_40/29-checker-powergridviolations'…
 Check for power grid violations (as reported by OpenROAD PSM- you may ignore these if LVS passes) clear.
-Running 'OpenROAD.STAMidPNR' at 'user_project_wrapper/runs/25_11_12_16_59/30-openroad-stamidpnr'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/30-openroad-stamidpnr/openroad-stamidpnr.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'OpenROAD.STAMidPNR' at 'user_project_wrapper/runs/25_11_17_11_40/30-openroad-stamidpnr'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/30-openroad-stamidpnr/openroad-stamidpnr.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [GRT-0097] No global routing found for nets.
-Running 'OpenROAD.RepairDesignPostGPL' at 'user_project_wrapper/runs/25_11_12_16_59/31-openroad-repairdesignpostgpl'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/31-openroad-repairdesignpostgpl/openroad-repairdesignpostgpl.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'OpenROAD.RepairDesignPostGPL' at 'user_project_wrapper/runs/25_11_17_11_40/31-openroad-repairdesignpostgpl'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/31-openroad-repairdesignpostgpl/openroad-repairdesignpostgpl.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [RSZ-0065] max wire length less than 6335u increases wire delays.
-Running 'Odb.ManualGlobalPlacement' at 'user_project_wrapper/runs/25_11_12_16_59/32-odb-manualglobalplacement'…
+Running 'Odb.ManualGlobalPlacement' at 'user_project_wrapper/runs/25_11_17_11_40/32-odb-manualglobalplacement'…
 'MANUAL_GLOBAL_PLACEMENTS' not set, skipping…
-Running 'OpenROAD.DetailedPlacement' at 'user_project_wrapper/runs/25_11_12_16_59/33-openroad-detailedplacement'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/33-openroad-detailedplacement/openroad-detailedplacement.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-Running 'OpenROAD.CTS' at 'user_project_wrapper/runs/25_11_12_16_59/34-openroad-cts'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/34-openroad-cts/openroad-cts.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-Running 'OpenROAD.STAMidPNR-1' at 'user_project_wrapper/runs/25_11_12_16_59/35-openroad-stamidpnr-1'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/35-openroad-stamidpnr-1/openroad-stamidpnr-1.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'OpenROAD.DetailedPlacement' at 'user_project_wrapper/runs/25_11_17_11_40/33-openroad-detailedplacement'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/33-openroad-detailedplacement/openroad-detailedplacement.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'OpenROAD.CTS' at 'user_project_wrapper/runs/25_11_17_11_40/34-openroad-cts'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/34-openroad-cts/openroad-cts.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'OpenROAD.STAMidPNR-1' at 'user_project_wrapper/runs/25_11_17_11_40/35-openroad-stamidpnr-1'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/35-openroad-stamidpnr-1/openroad-stamidpnr-1.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [GRT-0097] No global routing found for nets.
-Running 'OpenROAD.ResizerTimingPostCTS' at 'user_project_wrapper/runs/25_11_12_16_59/36-openroad-resizertimingpostcts'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/36-openroad-resizertimingpostcts/openroad-resizertimingpostcts.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-Running 'OpenROAD.STAMidPNR-2' at 'user_project_wrapper/runs/25_11_12_16_59/37-openroad-stamidpnr-2'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/37-openroad-stamidpnr-2/openroad-stamidpnr-2.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'OpenROAD.ResizerTimingPostCTS' at 'user_project_wrapper/runs/25_11_17_11_40/36-openroad-resizertimingpostcts'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/36-openroad-resizertimingpostcts/openroad-resizertimingpostcts.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'OpenROAD.STAMidPNR-2' at 'user_project_wrapper/runs/25_11_17_11_40/37-openroad-stamidpnr-2'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/37-openroad-stamidpnr-2/openroad-stamidpnr-2.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [GRT-0097] No global routing found for nets.
-Running 'OpenROAD.GlobalRouting' at 'user_project_wrapper/runs/25_11_12_16_59/38-openroad-globalrouting'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/38-openroad-globalrouting/openroad-globalrouting.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'OpenROAD.GlobalRouting' at 'user_project_wrapper/runs/25_11_17_11_40/38-openroad-globalrouting'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/38-openroad-globalrouting/openroad-globalrouting.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [GRT-0036] Pin analog_io[0] is outside die area.
 [GRT-0036] Pin analog_io[10] is outside die area.
 [GRT-0036] Pin analog_io[11] is outside die area.
@@ -860,6 +868,118 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/3
 [GRT-0041] Net vccd1 has wires/vias outside die area.
 [GRT-0041] Net vccd1 has wires/vias outside die area.
 [GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
@@ -967,6 +1087,240 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/3
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
@@ -1074,23 +1428,352 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/3
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
-Running 'OpenROAD.CheckAntennas' at 'user_project_wrapper/runs/25_11_12_16_59/39-openroad-checkantennas'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/39-openroad-checkantennas/openroad-checkantennas.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] message limit reached, this message will no longer print
+Running 'OpenROAD.CheckAntennas' at 'user_project_wrapper/runs/25_11_17_11_40/39-openroad-checkantennas'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/39-openroad-checkantennas/openroad-checkantennas.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 Gating variable for step 'OpenROAD.RepairDesignPostGRT' set to 'False'- the step will be skipped.
 Skipping step 'Repair Design (Post-Global Routing)'…
-Running 'Odb.DiodesOnPorts' at 'user_project_wrapper/runs/25_11_12_16_59/40-odb-diodesonports'…
+Running 'Odb.DiodesOnPorts' at 'user_project_wrapper/runs/25_11_17_11_40/40-odb-diodesonports'…
 'DIODE_ON_PORTS' is set to 'none': skipping…
-Running 'Odb.HeuristicDiodeInsertion' at 'user_project_wrapper/runs/25_11_12_16_59/41-odb-heuristicdiodeinsertion'…
-Running 'Odb.FuzzyDiodePlacement' at 'user_project_wrapper/runs/25_11_12_16_59/41-odb-heuristicdiodeinsertion/1-odb-fuzzydiodeplacement'…
+Running 'Odb.HeuristicDiodeInsertion' at 'user_project_wrapper/runs/25_11_17_11_40/41-odb-heuristicdiodeinsertion'…
+Running 'Odb.FuzzyDiodePlacement' at 'user_project_wrapper/runs/25_11_17_11_40/41-odb-heuristicdiodeinsertion/1-odb-fuzzydiodeplacement'…
 'GPL_CELL_PADDING' is set to 0. This step may cause overlap failures.
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/41-odb-heuristicdiodeinsertion/1-odb-fuzzydiodeplacement/odb-fuzzydiodeplacement.log'[/repr.filename]…
-Running 'OpenROAD.DetailedPlacement' at 'user_project_wrapper/runs/25_11_12_16_59/41-odb-heuristicdiodeinsertion/2-openroad-detailedplacement'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/41-odb-heuristicdiodeinsertion/2-openroad-detailedplacement/openroad-detailedplacement.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-Running 'OpenROAD.GlobalRouting' at 'user_project_wrapper/runs/25_11_12_16_59/41-odb-heuristicdiodeinsertion/3-openroad-globalrouting'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/41-odb-heuristicdiodeinsertion/3-openroad-globalrouting/openroad-globalrouting.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/41-odb-heuristicdiodeinsertion/1-odb-fuzzydiodeplacement/odb-fuzzydiodeplacement.log'[/repr.filename]…
+Running 'OpenROAD.DetailedPlacement' at 'user_project_wrapper/runs/25_11_17_11_40/41-odb-heuristicdiodeinsertion/2-openroad-detailedplacement'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/41-odb-heuristicdiodeinsertion/2-openroad-detailedplacement/openroad-detailedplacement.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'OpenROAD.GlobalRouting' at 'user_project_wrapper/runs/25_11_17_11_40/41-odb-heuristicdiodeinsertion/3-openroad-globalrouting'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/41-odb-heuristicdiodeinsertion/3-openroad-globalrouting/openroad-globalrouting.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [GRT-0036] Pin analog_io[0] is outside die area.
 [GRT-0036] Pin analog_io[10] is outside die area.
 [GRT-0036] Pin analog_io[11] is outside die area.
@@ -1840,6 +2523,118 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/4
 [GRT-0041] Net vccd1 has wires/vias outside die area.
 [GRT-0041] Net vccd1 has wires/vias outside die area.
 [GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
@@ -1947,6 +2742,240 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/4
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
@@ -2054,10 +3083,339 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/4
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
-Running 'OpenROAD.RepairAntennas' at 'user_project_wrapper/runs/25_11_12_16_59/42-openroad-repairantennas'…
-Running 'DiodeInsertion' at 'user_project_wrapper/runs/25_11_12_16_59/42-openroad-repairantennas/1-diodeinsertion'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/42-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] message limit reached, this message will no longer print
+Running 'OpenROAD.RepairAntennas' at 'user_project_wrapper/runs/25_11_17_11_40/42-openroad-repairantennas'…
+Running 'DiodeInsertion' at 'user_project_wrapper/runs/25_11_17_11_40/42-openroad-repairantennas/1-diodeinsertion'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/42-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [GRT-0036] Pin analog_io[0] is outside die area.
 [GRT-0036] Pin analog_io[10] is outside die area.
 [GRT-0036] Pin analog_io[11] is outside die area.
@@ -2807,6 +4165,118 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/4
 [GRT-0041] Net vccd1 has wires/vias outside die area.
 [GRT-0041] Net vccd1 has wires/vias outside die area.
 [GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
+[GRT-0041] Net vccd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
@@ -2914,6 +4384,240 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/4
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
 [GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vssd1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
@@ -3021,8 +4725,338 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/4
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
 [GRT-0041] Net vdda1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vssa1 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] Net vccd2 has wires/vias outside die area.
+[GRT-0041] message limit reached, this message will no longer print
 [GRT-0036] Pin analog_io[0] is outside die area.
 [GRT-0036] Pin analog_io[10] is outside die area.
+[GRT-0036] Pin analog_io[11] is outside die area.
 [GRT-0036] Pin analog_io[12] is outside die area.
 [GRT-0036] Pin analog_io[1] is outside die area.
 [GRT-0036] Pin analog_io[2] is outside die area.
@@ -3206,9 +5240,7 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/4
 [GRT-0036] Pin wb_clk_i is outside die area.
 [GRT-0036] Pin wb_rst_i is outside die area.
 [GRT-0036] Pin wbs_ack_o is outside die area.
-[GRT-0036] Pin wbs_adr_i[0] is outside die area.
 [GRT-0036] Pin wbs_adr_i[10] is outside die area.
-[GRT-0036] Pin wbs_adr_i[11] is outside die area.
 [GRT-0036] Pin wbs_adr_i[12] is outside die area.
 [GRT-0036] Pin wbs_adr_i[13] is outside die area.
 [GRT-0036] Pin wbs_adr_i[14] is outside die area.
@@ -3221,17 +5253,14 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/4
 [GRT-0036] Pin wbs_adr_i[21] is outside die area.
 [GRT-0036] Pin wbs_adr_i[22] is outside die area.
 [GRT-0036] Pin wbs_adr_i[23] is outside die area.
-[GRT-0036] Pin wbs_adr_i[24] is outside die area.
 [GRT-0036] Pin wbs_adr_i[25] is outside die area.
 [GRT-0036] Pin wbs_adr_i[26] is outside die area.
 [GRT-0036] Pin wbs_adr_i[27] is outside die area.
 [GRT-0036] Pin wbs_adr_i[28] is outside die area.
 [GRT-0036] Pin wbs_adr_i[29] is outside die area.
 [GRT-0036] Pin wbs_adr_i[2] is outside die area.
-[GRT-0036] Pin wbs_adr_i[30] is outside die area.
 [GRT-0036] Pin wbs_adr_i[31] is outside die area.
 [GRT-0036] Pin wbs_adr_i[4] is outside die area.
-[GRT-0036] Pin wbs_adr_i[5] is outside die area.
 [GRT-0036] Pin wbs_adr_i[6] is outside die area.
 [GRT-0036] Pin wbs_adr_i[7] is outside die area.
 [GRT-0036] Pin wbs_adr_i[9] is outside die area.
@@ -3239,17 +5268,17 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/4
 [GRT-0036] Pin wbs_dat_i[0] is outside die area.
 [GRT-0036] Pin wbs_dat_i[10] is outside die area.
 [GRT-0036] Pin wbs_dat_i[11] is outside die area.
+[GRT-0036] Pin wbs_dat_i[12] is outside die area.
 [GRT-0036] Pin wbs_dat_i[13] is outside die area.
 [GRT-0036] Pin wbs_dat_i[14] is outside die area.
+[GRT-0036] Pin wbs_dat_i[15] is outside die area.
 [GRT-0036] Pin wbs_dat_i[16] is outside die area.
 [GRT-0036] Pin wbs_dat_i[17] is outside die area.
 [GRT-0036] Pin wbs_dat_i[18] is outside die area.
 [GRT-0036] Pin wbs_dat_i[19] is outside die area.
 [GRT-0036] Pin wbs_dat_i[1] is outside die area.
-[GRT-0036] Pin wbs_dat_i[20] is outside die area.
 [GRT-0036] Pin wbs_dat_i[21] is outside die area.
 [GRT-0036] Pin wbs_dat_i[22] is outside die area.
-[GRT-0036] Pin wbs_dat_i[23] is outside die area.
 [GRT-0036] Pin wbs_dat_i[24] is outside die area.
 [GRT-0036] Pin wbs_dat_i[25] is outside die area.
 [GRT-0036] Pin wbs_dat_i[26] is outside die area.
@@ -3301,6 +5330,8 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/4
 [GRT-0036] Pin wbs_sel_i[0] is outside die area.
 [GRT-0036] Pin wbs_sel_i[1] is outside die area.
 [GRT-0036] Pin wbs_sel_i[2] is outside die area.
+[GRT-0036] Pin wbs_stb_i is outside die area.
+[GRT-0036] Pin wbs_we_i is outside die area.
 [GRT-0036] Pin analog_io[0] is outside die area.
 [GRT-0036] Pin analog_io[1] is outside die area.
 [GRT-0036] Pin analog_io[0] is outside die area.
@@ -3384,345 +5415,21 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/4
 [GRT-0036] Pin io_oeb[2] is outside die area.
 [GRT-0036] Pin io_oeb[21] is outside die area.
 [GRT-0036] Pin io_oeb[22] is outside die area.
+[GRT-0036] Pin io_oeb[23] is outside die area.
+[GRT-0036] Pin io_oeb[24] is outside die area.
 [GRT-0036] message limit reached, this message will no longer print
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vccd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vssd1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-[GRT-0041] Net vdda1 has wires/vias outside die area.
-Running 'OpenROAD.CheckAntennas' at 'user_project_wrapper/runs/25_11_12_16_59/42-openroad-repairantennas/2-openroad-checkantennas'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/42-openroad-repairantennas/2-openroad-checkantennas/openroad-checkantennas.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'OpenROAD.CheckAntennas' at 'user_project_wrapper/runs/25_11_17_11_40/42-openroad-repairantennas/2-openroad-checkantennas'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/42-openroad-repairantennas/2-openroad-checkantennas/openroad-checkantennas.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 Gating variable for step 'OpenROAD.ResizerTimingPostGRT' set to 'False'- the step will be skipped.
 Skipping step 'Resizer Timing Optimizations (Post-Global Routing)'…
-Running 'OpenROAD.STAMidPNR-3' at 'user_project_wrapper/runs/25_11_12_16_59/43-openroad-stamidpnr-3'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/43-openroad-stamidpnr-3/openroad-stamidpnr-3.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-Running 'OpenROAD.DetailedRouting' at 'user_project_wrapper/runs/25_11_12_16_59/44-openroad-detailedrouting'…
+Running 'OpenROAD.STAMidPNR-3' at 'user_project_wrapper/runs/25_11_17_11_40/43-openroad-stamidpnr-3'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/43-openroad-stamidpnr-3/openroad-stamidpnr-3.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'OpenROAD.DetailedRouting' at 'user_project_wrapper/runs/25_11_17_11_40/44-openroad-detailedrouting'…
 Running TritonRoute with 192 threads…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/44-openroad-detailedrouting/openroad-detailedrouting.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/44-openroad-detailedrouting/openroad-detailedrouting.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
 [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
 [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
 [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
@@ -3733,122 +5440,122 @@ Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/4
 [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
 [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
 [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
-Running 'Odb.RemoveRoutingObstructions' at 'user_project_wrapper/runs/25_11_12_16_59/45-odb-removeroutingobstructions'…
+Running 'Odb.RemoveRoutingObstructions' at 'user_project_wrapper/runs/25_11_17_11_40/45-odb-removeroutingobstructions'…
 'ROUTING_OBSTRUCTIONS' is not defined. Skipping 'Odb.RemoveRoutingObstructions'…
-Running 'OpenROAD.CheckAntennas-1' at 'user_project_wrapper/runs/25_11_12_16_59/46-openroad-checkantennas-1'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/46-openroad-checkantennas-1/openroad-checkantennas-1.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-Running 'Checker.TrDRC' at 'user_project_wrapper/runs/25_11_12_16_59/47-checker-trdrc'…
+Running 'OpenROAD.CheckAntennas-1' at 'user_project_wrapper/runs/25_11_17_11_40/46-openroad-checkantennas-1'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/46-openroad-checkantennas-1/openroad-checkantennas-1.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'Checker.TrDRC' at 'user_project_wrapper/runs/25_11_17_11_40/47-checker-trdrc'…
 Check for Routing DRC errors clear.
-Running 'Odb.ReportDisconnectedPins' at 'user_project_wrapper/runs/25_11_12_16_59/48-odb-reportdisconnectedpins'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/48-odb-reportdisconnectedpins/odb-reportdisconnectedpins.log'[/repr.filename]…
-Running 'Checker.DisconnectedPins' at 'user_project_wrapper/runs/25_11_12_16_59/49-checker-disconnectedpins'…
+Running 'Odb.ReportDisconnectedPins' at 'user_project_wrapper/runs/25_11_17_11_40/48-odb-reportdisconnectedpins'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/48-odb-reportdisconnectedpins/odb-reportdisconnectedpins.log'[/repr.filename]…
+Running 'Checker.DisconnectedPins' at 'user_project_wrapper/runs/25_11_17_11_40/49-checker-disconnectedpins'…
 Check for critical disconnected pins clear.
-Running 'Odb.ReportWireLength' at 'user_project_wrapper/runs/25_11_12_16_59/50-odb-reportwirelength'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/50-odb-reportwirelength/odb-reportwirelength.log'[/repr.filename]…
-Running 'Checker.WireLength' at 'user_project_wrapper/runs/25_11_12_16_59/51-checker-wirelength'…
+Running 'Odb.ReportWireLength' at 'user_project_wrapper/runs/25_11_17_11_40/50-odb-reportwirelength'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/50-odb-reportwirelength/odb-reportwirelength.log'[/repr.filename]…
+Running 'Checker.WireLength' at 'user_project_wrapper/runs/25_11_17_11_40/51-checker-wirelength'…
 Threshold for Threshold-surpassing long wires is not set. The checker will be skipped.
-Running 'OpenROAD.FillInsertion' at 'user_project_wrapper/runs/25_11_12_16_59/52-openroad-fillinsertion'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/52-openroad-fillinsertion/openroad-fillinsertion.log'[/repr.filename]…
-[STA-1140] /home/marcus/caravel_user_neuromorphic_comp/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
-Running 'Odb.CellFrequencyTables' at 'user_project_wrapper/runs/25_11_12_16_59/53-odb-cellfrequencytables'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/53-odb-cellfrequencytables/buffer_list.txt'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/53-odb-cellfrequencytables/odb-cellfrequencytables.log'[/repr.filename]…
-Running 'OpenROAD.RCX' at 'user_project_wrapper/runs/25_11_12_16_59/54-openroad-rcx'…
-Running RCX for corners matching nom_* (/home/marcus/caravel_user_neuromorphic_comp/openlane/user_project_wrapper/runs/25_11_12_16_59/54-openroad-rcx/nom/rcx.log)…
-Running RCX for corners matching min_* (/home/marcus/caravel_user_neuromorphic_comp/openlane/user_project_wrapper/runs/25_11_12_16_59/54-openroad-rcx/min/rcx.log)…
-Running RCX for corners matching max_* (/home/marcus/caravel_user_neuromorphic_comp/openlane/user_project_wrapper/runs/25_11_12_16_59/54-openroad-rcx/max/rcx.log)…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/54-openroad-rcx/nom/rcx.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/54-openroad-rcx/min/rcx.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/54-openroad-rcx/max/rcx.log'[/repr.filename]…
+Running 'OpenROAD.FillInsertion' at 'user_project_wrapper/runs/25_11_17_11_40/52-openroad-fillinsertion'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/52-openroad-fillinsertion/openroad-fillinsertion.log'[/repr.filename]…
+[STA-1140] /home/marcus/caravel_pdn_overhaul/lib/Neuromorphic_X1_wb.lib line 1, library Neuromorphic_X1_wb already exists.
+Running 'Odb.CellFrequencyTables' at 'user_project_wrapper/runs/25_11_17_11_40/53-odb-cellfrequencytables'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/53-odb-cellfrequencytables/buffer_list.txt'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/53-odb-cellfrequencytables/odb-cellfrequencytables.log'[/repr.filename]…
+Running 'OpenROAD.RCX' at 'user_project_wrapper/runs/25_11_17_11_40/54-openroad-rcx'…
+Running RCX for corners matching nom_* (/home/marcus/caravel_pdn_overhaul/openlane/user_project_wrapper/runs/25_11_17_11_40/54-openroad-rcx/nom/rcx.log)…
+Running RCX for corners matching min_* (/home/marcus/caravel_pdn_overhaul/openlane/user_project_wrapper/runs/25_11_17_11_40/54-openroad-rcx/min/rcx.log)…
+Running RCX for corners matching max_* (/home/marcus/caravel_pdn_overhaul/openlane/user_project_wrapper/runs/25_11_17_11_40/54-openroad-rcx/max/rcx.log)…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/54-openroad-rcx/nom/rcx.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/54-openroad-rcx/min/rcx.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/54-openroad-rcx/max/rcx.log'[/repr.filename]…
+Finished RCX for corners matching min_*.
 Finished RCX for corners matching max_*.
 Finished RCX for corners matching nom_*.
-Finished RCX for corners matching min_*.
-Running 'OpenROAD.STAPostPNR' at 'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr'…
+Running 'OpenROAD.STAPostPNR' at 'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr'…
 Starting STA for the nom_tt_025C_1v80 timing corner…
 Starting STA for the nom_ss_100C_1v60 timing corner…
 Starting STA for the nom_ff_n40C_1v95 timing corner…
 Starting STA for the min_tt_025C_1v80 timing corner…
 Starting STA for the min_ss_100C_1v60 timing corner…
 Starting STA for the min_ff_n40C_1v95 timing corner…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/nom_ss_100C_1v60/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/nom_ff_n40C_1v95/sta.log'[/repr.filename]…
 Starting STA for the max_tt_025C_1v80 timing corner…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/nom_tt_025C_1v80/sta.log'[/repr.filename]…
 Starting STA for the max_ss_100C_1v60 timing corner…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/nom_ss_100C_1v60/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/nom_tt_025C_1v80/sta.log'[/repr.filename]…
 Starting STA for the max_ff_n40C_1v95 timing corner…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/nom_ff_n40C_1v95/sta.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/min_ff_n40C_1v95/sta.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/min_tt_025C_1v80/sta.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/min_ss_100C_1v60/sta.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/max_tt_025C_1v80/sta.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/max_ss_100C_1v60/sta.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/max_ff_n40C_1v95/sta.log'[/repr.filename]…
-Finished STA for the min_ss_100C_1v60 timing corner.
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/min_ss_100C_1v60/filter_unannotated.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/min_ff_n40C_1v95/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/min_tt_025C_1v80/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/min_ss_100C_1v60/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/max_ff_n40C_1v95/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/max_tt_025C_1v80/sta.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/max_ss_100C_1v60/sta.log'[/repr.filename]…
 Finished STA for the nom_ss_100C_1v60 timing corner.
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/nom_ss_100C_1v60/filter_unannotated.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/nom_ss_100C_1v60/filter_unannotated.log'[/repr.filename]…
+Finished STA for the min_ss_100C_1v60 timing corner.
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/min_ss_100C_1v60/filter_unannotated.log'[/repr.filename]…
 Finished STA for the max_ss_100C_1v60 timing corner.
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/max_ss_100C_1v60/filter_unannotated.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/max_ss_100C_1v60/filter_unannotated.log'[/repr.filename]…
 Finished STA for the min_tt_025C_1v80 timing corner.
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/min_tt_025C_1v80/filter_unannotated.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/min_tt_025C_1v80/filter_unannotated.log'[/repr.filename]…
 Finished STA for the nom_tt_025C_1v80 timing corner.
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/nom_tt_025C_1v80/filter_unannotated.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/nom_tt_025C_1v80/filter_unannotated.log'[/repr.filename]…
 Finished STA for the max_tt_025C_1v80 timing corner.
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/max_tt_025C_1v80/filter_unannotated.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/max_tt_025C_1v80/filter_unannotated.log'[/repr.filename]…
 Finished STA for the nom_ff_n40C_1v95 timing corner.
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/nom_ff_n40C_1v95/filter_unannotated.log'[/repr.filename]…
 Finished STA for the min_ff_n40C_1v95 timing corner.
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/nom_ff_n40C_1v95/filter_unannotated.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/min_ff_n40C_1v95/filter_unannotated.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/min_ff_n40C_1v95/filter_unannotated.log'[/repr.filename]…
 Finished STA for the max_ff_n40C_1v95 timing corner.
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/55-openroad-stapostpnr/max_ff_n40C_1v95/filter_unannotated.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/55-openroad-stapostpnr/max_ff_n40C_1v95/filter_unannotated.log'[/repr.filename]…
 Gating variable for step 'OpenROAD.IRDropReport' set to 'False'- the step will be skipped.
 Skipping step 'IR Drop Report'…
-Running 'Magic.StreamOut' at 'user_project_wrapper/runs/25_11_12_16_59/56-magic-streamout'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/56-magic-streamout/Neuromorphic_X1_wb.get_bbox.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/56-magic-streamout/magic-streamout.log'[/repr.filename]…
-Running 'KLayout.StreamOut' at 'user_project_wrapper/runs/25_11_12_16_59/57-klayout-streamout'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/57-klayout-streamout/klayout-streamout.log'[/repr.filename]…
-Running 'Magic.WriteLEF' at 'user_project_wrapper/runs/25_11_12_16_59/58-magic-writelef'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/58-magic-writelef/magic-writelef.log'[/repr.filename]…
-Running 'Odb.CheckDesignAntennaProperties' at 'user_project_wrapper/runs/25_11_12_16_59/59-odb-checkdesignantennaproperties'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/59-odb-checkdesignantennaproperties/odb-checkdesignantennaproperties.log'[/repr.filename]…
+Running 'Magic.StreamOut' at 'user_project_wrapper/runs/25_11_17_11_40/56-magic-streamout'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/56-magic-streamout/Neuromorphic_X1_wb.get_bbox.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/56-magic-streamout/magic-streamout.log'[/repr.filename]…
+Running 'KLayout.StreamOut' at 'user_project_wrapper/runs/25_11_17_11_40/57-klayout-streamout'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/57-klayout-streamout/klayout-streamout.log'[/repr.filename]…
+Running 'Magic.WriteLEF' at 'user_project_wrapper/runs/25_11_17_11_40/58-magic-writelef'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/58-magic-writelef/magic-writelef.log'[/repr.filename]…
+Running 'Odb.CheckDesignAntennaProperties' at 'user_project_wrapper/runs/25_11_17_11_40/59-odb-checkdesignantennaproperties'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/59-odb-checkdesignantennaproperties/odb-checkdesignantennaproperties.log'[/repr.filename]…
 Cell 'user_project_wrapper' has (17) inout pin(s) without anetnna gate information not antenna diffusion information. They might be disconnected.
 Cell 'user_project_wrapper' has (291) input pin(s) without antenna gate information. They might not be connected to a gate.
 Cell 'user_project_wrapper' has (205) output pin(s) without antenna diffusion information. They might not be driven.
-Running 'KLayout.XOR' at 'user_project_wrapper/runs/25_11_12_16_59/60-klayout-xor'…
+Running 'KLayout.XOR' at 'user_project_wrapper/runs/25_11_17_11_40/60-klayout-xor'…
 Running XOR with 192 threads…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/60-klayout-xor/klayout-xor.log'[/repr.filename]…
-Running 'Checker.XOR' at 'user_project_wrapper/runs/25_11_12_16_59/61-checker-xor'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/60-klayout-xor/klayout-xor.log'[/repr.filename]…
+Running 'Checker.XOR' at 'user_project_wrapper/runs/25_11_17_11_40/61-checker-xor'…
 Check for XOR differences clear.
-Running 'Magic.DRC' at 'user_project_wrapper/runs/25_11_12_16_59/62-magic-drc'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/62-magic-drc/magic-drc.log'[/repr.filename]…
-Running 'KLayout.DRC' at 'user_project_wrapper/runs/25_11_12_16_59/63-klayout-drc'…
+Running 'Magic.DRC' at 'user_project_wrapper/runs/25_11_17_11_40/62-magic-drc'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/62-magic-drc/magic-drc.log'[/repr.filename]…
+Running 'KLayout.DRC' at 'user_project_wrapper/runs/25_11_17_11_40/63-klayout-drc'…
 Running KLayout DRC with 192 threads…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/63-klayout-drc/klayout-drc.log'[/repr.filename]…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/63-klayout-drc/xml_drc_report_to_json.log'[/repr.filename]…
-Running 'Checker.MagicDRC' at 'user_project_wrapper/runs/25_11_12_16_59/64-checker-magicdrc'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/63-klayout-drc/klayout-drc.log'[/repr.filename]…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/63-klayout-drc/xml_drc_report_to_json.log'[/repr.filename]…
+Running 'Checker.MagicDRC' at 'user_project_wrapper/runs/25_11_17_11_40/64-checker-magicdrc'…
 Check for Magic DRC errors clear.
-Running 'Checker.KLayoutDRC' at 'user_project_wrapper/runs/25_11_12_16_59/65-checker-klayoutdrc'…
+Running 'Checker.KLayoutDRC' at 'user_project_wrapper/runs/25_11_17_11_40/65-checker-klayoutdrc'…
 Check for KLayout DRC errors clear.
-Running 'Magic.SpiceExtraction' at 'user_project_wrapper/runs/25_11_12_16_59/66-magic-spiceextraction'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/66-magic-spiceextraction/magic-spiceextraction.log'[/repr.filename]…
-Running 'Checker.IllegalOverlap' at 'user_project_wrapper/runs/25_11_12_16_59/67-checker-illegaloverlap'…
+Running 'Magic.SpiceExtraction' at 'user_project_wrapper/runs/25_11_17_11_40/66-magic-spiceextraction'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/66-magic-spiceextraction/magic-spiceextraction.log'[/repr.filename]…
+Running 'Checker.IllegalOverlap' at 'user_project_wrapper/runs/25_11_17_11_40/67-checker-illegaloverlap'…
 Check for Magic Illegal Overlap errors clear.
-Running 'Netgen.LVS' at 'user_project_wrapper/runs/25_11_12_16_59/68-netgen-lvs'…
-Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_12_16_59/68-netgen-lvs/netgen-lvs.log'[/repr.filename]…
-Running 'Checker.LVS' at 'user_project_wrapper/runs/25_11_12_16_59/69-checker-lvs'…
+Running 'Netgen.LVS' at 'user_project_wrapper/runs/25_11_17_11_40/68-netgen-lvs'…
+Logging subprocess to [repr.filename]'user_project_wrapper/runs/25_11_17_11_40/68-netgen-lvs/netgen-lvs.log'[/repr.filename]…
+Running 'Checker.LVS' at 'user_project_wrapper/runs/25_11_17_11_40/69-checker-lvs'…
 Check for LVS errors clear.
 Gating variable for step 'Yosys.EQY' set to 'False'- the step will be skipped.
 Skipping step 'Equivalence Check'…
-Running 'Checker.SetupViolations' at 'user_project_wrapper/runs/25_11_12_16_59/70-checker-setupviolations'…
+Running 'Checker.SetupViolations' at 'user_project_wrapper/runs/25_11_17_11_40/70-checker-setupviolations'…
 Setup violations found in the following corners:
 * max_ss_100C_1v60
 * min_ss_100C_1v60
 * nom_ss_100C_1v60
 No setup violations found
-Running 'Checker.HoldViolations' at 'user_project_wrapper/runs/25_11_12_16_59/71-checker-holdviolations'…
+Running 'Checker.HoldViolations' at 'user_project_wrapper/runs/25_11_17_11_40/71-checker-holdviolations'…
 No hold violations found
-Running 'Checker.MaxSlewViolations' at 'user_project_wrapper/runs/25_11_12_16_59/72-checker-maxslewviolations'…
+Running 'Checker.MaxSlewViolations' at 'user_project_wrapper/runs/25_11_17_11_40/72-checker-maxslewviolations'…
 Max Slew violations found in the following corners:
 * max_ff_n40C_1v95
 * max_ss_100C_1v60
@@ -3858,9 +5565,8 @@ Max Slew violations found in the following corners:
 * nom_ss_100C_1v60
 * nom_tt_025C_1v80
 No max slew violations found
-Running 'Checker.MaxCapViolations' at 'user_project_wrapper/runs/25_11_12_16_59/73-checker-maxcapviolations'…
+Running 'Checker.MaxCapViolations' at 'user_project_wrapper/runs/25_11_17_11_40/73-checker-maxcapviolations'…
 Max Cap violations found in the following corners:
-* max_ff_n40C_1v95
 * max_ss_100C_1v60
 * max_tt_025C_1v80
 * min_ss_100C_1v60
@@ -3868,6 +5574,6 @@ Max Cap violations found in the following corners:
 * nom_ss_100C_1v60
 * nom_tt_025C_1v80
 No max cap violations found
-Running 'Misc.ReportManufacturability' at 'user_project_wrapper/runs/25_11_12_16_59/74-misc-reportmanufacturability'…
-Saving views to '/home/marcus/caravel_user_neuromorphic_comp/openlane/user_project_wrapper/runs/25_11_12_16_59/final'…
+Running 'Misc.ReportManufacturability' at 'user_project_wrapper/runs/25_11_17_11_40/74-misc-reportmanufacturability'…
+Saving views to '/home/marcus/caravel_pdn_overhaul/openlane/user_project_wrapper/runs/25_11_17_11_40/final'…
 Flow complete.
