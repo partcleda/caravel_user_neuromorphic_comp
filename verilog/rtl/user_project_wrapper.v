@@ -92,13 +92,16 @@ module user_project_wrapper #(
         .wbs_ack_o (wbs_ack_o_neuro),
 
         // Scan/Test
-        .ScanInCC  (io_in[4]),
-        .ScanInDL  (io_in[1]),
-        .ScanInDR  (io_in[2]),
-        .TM        (io_in[5]),
-        .ScanOutCC (io_out[0]),
+        // io[0:6] either reserved or unused (on powerup),
+        // so place after analog pins
+        .ScanInCC  (io_in[24]),
+        .ScanInDL  (io_in[21]),
+        .ScanInDR  (io_in[22]),
+        .TM        (io_in[25]),
+        .ScanOutCC (io_out[20]),
 
         // Analog / bias pins (drive from analog_io[] wires you already built)
+        // analog_io[k] = io[k + 7], below essentially uses io[7:19]
         .Iref          (analog_io[0]),
         .Vcc_read      (analog_io[1]),
         .Vcomp         (analog_io[2]),
@@ -153,13 +156,14 @@ module user_project_wrapper #(
     assign user_irq = {2'b00, irq_matmul};
 
     // https://chipfoundry.io/knowledge-base/connecting-gpios
-    // Make sure to drive `io_oeb[0]` low to enable pin 0 as output
-    assign io_oeb = {(`MPRJ_IO_PADS-1){1'b1}, 1'b0};
+    // Make sure to drive io_oeb[20] low to enable io 20 (ScanOutCC) as output
+    assign io_oeb = {{(`MPRJ_IO_PADS-21){1'b1}}, 1'b0, {20{1'b1}}};
 
     // Tie off unused outputs
     assign la_data_out               = 128'b0;
-    assign io_out[`MPRJ_IO_PADS-1:1] = {(`MPRJ_IO_PADS-1){1'b0}};
-    // Note: io_out partially driven by neuro_inst.ScanOutCC
+    assign io_out[`MPRJ_IO_PADS-1:21] = {(`MPRJ_IO_PADS-21){1'b0}};
+    assign io_out[19:0]               = {20{1'b0}};
+    // Note: io_out[20] driven by neuro_inst.ScanOutCC
 
 endmodule
 `default_nettype wire

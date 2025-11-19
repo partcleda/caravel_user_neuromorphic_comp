@@ -29,6 +29,22 @@
   "RUN_CTS": true,
   "RUN_IRDROP_REPORT": false,
 
+  "//": "Don't buffer analog signals",
+  "RSZ_DONT_TOUCH_LIST": [
+    "analog_io[0]",
+    "analog_io[1]",
+    "analog_io[2]",
+    "analog_io[3]",
+    "analog_io[5]",
+    "analog_io[6]",
+    "analog_io[7]",
+    "analog_io[8]",
+    "analog_io[9]",
+    "analog_io[10]",
+    "analog_io[11]",
+    "analog_io[12]"
+  ],
+
   "//": "Use custom PDN (compat script: set_voltage_domain + pdngen; no PDN_* envs)",
   "FP_PDN_CFG": "dir::./pdn_override_2.tcl",
 
@@ -61,9 +77,6 @@
   "//": "Specify halo around macros",
   "FP_MACRO_HORIZONTAL_HALO": 5,
   "FP_MACRO_VERTICAL_HALO": 5,
-
-  "//": "PDN configurations (straps that land on your met3 pins)",
-  "//": "prev config: 180, 180, 20, 46, 6, 6, 15.5, 15.5",
 
   "//": "Core ring inside die bounds",
   "FP_PDN_CORE_RING": true,
