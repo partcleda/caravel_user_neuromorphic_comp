@@ -4999,7 +4999,6 @@ Bterm vccd1 is declared as a 'POWER' pin. It will be ignored.
 [GRT-0041] message limit reached, this message will no longer print
 [GRT-0036] Pin analog_io[0] is outside die area.
 [GRT-0036] Pin analog_io[10] is outside die area.
-[GRT-0036] Pin analog_io[11] is outside die area.
 [GRT-0036] Pin analog_io[12] is outside die area.
 [GRT-0036] Pin analog_io[1] is outside die area.
 [GRT-0036] Pin analog_io[2] is outside die area.
@@ -5279,6 +5278,7 @@ Bterm vccd1 is declared as a 'POWER' pin. It will be ignored.
 [GRT-0036] Pin wbs_sel_i[2] is outside die area.
 [GRT-0036] Pin io_oeb[20] is outside die area.
 [GRT-0036] Pin analog_io[0] is outside die area.
+[GRT-0036] Pin analog_io[0] is outside die area.
 [GRT-0036] Pin analog_io[10] is outside die area.
 [GRT-0036] Pin analog_io[11] is outside die area.
 [GRT-0036] Pin analog_io[12] is outside die area.
@@ -5390,11 +5390,9 @@ Max Slew violations found in the following corners:
 * max_tt_025C_1v80
 * min_ss_100C_1v60
 * min_tt_025C_1v80
-* nom_ff_n40C_1v95
 * nom_ss_100C_1v60
 * nom_tt_025C_1v80
 Max Cap violations found in the following corners:
-* max_ff_n40C_1v95
 * max_ss_100C_1v60
 * max_tt_025C_1v80
 * min_ss_100C_1v60

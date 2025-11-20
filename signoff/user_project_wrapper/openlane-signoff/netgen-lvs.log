@@ -1469,8 +1469,8 @@ Circuit 1: sky130_fd_pr__special_nfet_01v8 |Circuit 2: sky130_fd_pr__special_nfe
 4                                          |4                                          
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
-Comparison output logged to file /home/marcus/caravel_pdn_overhaul/openlane/user_project_wrapper/runs/25_11_18_15_22/68-netgen-lvs/reports/lvs.netgen.rpt
-Logging to file "/home/marcus/caravel_pdn_overhaul/openlane/user_project_wrapper/runs/25_11_18_15_22/68-netgen-lvs/reports/lvs.netgen.rpt" enabled
+Comparison output logged to file /home/marcus/caravel_pdn_overhaul/openlane/user_project_wrapper/runs/25_11_19_11_53/68-netgen-lvs/reports/lvs.netgen.rpt
+Logging to file "/home/marcus/caravel_pdn_overhaul/openlane/user_project_wrapper/runs/25_11_19_11_53/68-netgen-lvs/reports/lvs.netgen.rpt" enabled
 Circuit sky130_fd_pr__pfet_01v8_hvt contains no devices.
 Circuit sky130_fd_pr__nfet_01v8 contains no devices.
 Circuit sky130_fd_pr__diode_pw2nd_05v5 contains no devices.
@@ -7012,7 +7012,7 @@ Circuit 1 contains 14 nets,    Circuit 2 contains 14 nets.
 
 
 Contents of circuit 1:  Circuit: 'user_project_wrapper'
-Circuit user_project_wrapper contains 625950 device instances.
+Circuit user_project_wrapper contains 625983 device instances.
   Class: sky130_fd_sc_hd__bufinv_16 instances: 172
   Class: sky130_fd_sc_hd__o2111ai_1 instances:   3
   Class: sky130_fd_sc_hd__o2111ai_2 instances:   3
@@ -7167,7 +7167,7 @@ Circuit user_project_wrapper contains 625950 device instances.
   Class: sky130_fd_sc_hd__nand2b_2 instances:  55
   Class: sky130_fd_sc_hd__nand2b_4 instances:   8
   Class: sky130_fd_sc_hd__a311oi_1 instances:   3
-  Class: sky130_fd_sc_hd__diode_2 instances: 66912
+  Class: sky130_fd_sc_hd__diode_2 instances: 66957
   Class: sky130_fd_sc_hd__a311oi_2 instances:   2
   Class: sky130_fd_sc_hd__a311oi_4 instances:   9
   Class: sky130_fd_sc_hd__a221o_1 instances: 829
@@ -7230,7 +7230,7 @@ Circuit user_project_wrapper contains 625950 device instances.
   Class: sky130_fd_sc_hd__a311o_1 instances:  51
   Class: sky130_fd_sc_hd__a21oi_4 instances:  22
   Class: sky130_fd_sc_hd__a311o_2 instances:  13
-  Class: sky130_ef_sc_hd__decap_40_12 instances: 441563
+  Class: sky130_ef_sc_hd__decap_40_12 instances: 441551
   Class: sky130_fd_sc_hd__o211ai_1 instances:  49
   Class: sky130_fd_sc_hd__o211ai_2 instances:  56
   Class: sky130_fd_sc_hd__o211ai_4 instances:  29
@@ -7243,7 +7243,7 @@ Circuit user_project_wrapper contains 625950 device instances.
   Class: sky130_fd_sc_hd__nor2_8 instances:  39
 Circuit contains 114527 nets, and 313 disconnected pins.
 Contents of circuit 2:  Circuit: 'user_project_wrapper'
-Circuit user_project_wrapper contains 625950 device instances.
+Circuit user_project_wrapper contains 625983 device instances.
   Class: sky130_fd_sc_hd__bufinv_16 instances: 172
   Class: sky130_fd_sc_hd__o2111ai_1 instances:   3
   Class: sky130_fd_sc_hd__o2111ai_2 instances:   3
@@ -7397,7 +7397,7 @@ Circuit user_project_wrapper contains 625950 device instances.
   Class: sky130_fd_sc_hd__nand2b_1 instances: 1037
   Class: sky130_fd_sc_hd__nand2b_2 instances:  55
   Class: sky130_fd_sc_hd__nand2b_4 instances:   8
-  Class: sky130_fd_sc_hd__diode_2 instances: 66912
+  Class: sky130_fd_sc_hd__diode_2 instances: 66957
   Class: sky130_fd_sc_hd__a311oi_1 instances:   3
   Class: sky130_fd_sc_hd__a311oi_2 instances:   2
   Class: sky130_fd_sc_hd__a311oi_4 instances:   9
@@ -7461,7 +7461,7 @@ Circuit user_project_wrapper contains 625950 device instances.
   Class: sky130_fd_sc_hd__a311o_1 instances:  51
   Class: sky130_fd_sc_hd__a21oi_4 instances:  22
   Class: sky130_fd_sc_hd__a311o_2 instances:  13
-  Class: sky130_ef_sc_hd__decap_40_12 instances: 441563
+  Class: sky130_ef_sc_hd__decap_40_12 instances: 441551
   Class: sky130_fd_sc_hd__o211ai_1 instances:  49
   Class: sky130_fd_sc_hd__o211ai_2 instances:  56
   Class: sky130_fd_sc_hd__o211ai_4 instances:  29
@@ -7478,7 +7478,7 @@ Circuit was modified by parallel/series device merging.
 New circuit summary:
 
 Contents of circuit 1:  Circuit: 'user_project_wrapper'
-Circuit user_project_wrapper contains 126010 device instances.
+Circuit user_project_wrapper contains 126004 device instances.
   Class: sky130_fd_sc_hd__bufinv_16 instances: 172
   Class: sky130_fd_sc_hd__o2111ai_1 instances:   3
   Class: sky130_fd_sc_hd__o2111ai_2 instances:   3
@@ -7633,7 +7633,7 @@ Circuit user_project_wrapper contains 126010 device instances.
   Class: sky130_fd_sc_hd__nand2b_2 instances:  55
   Class: sky130_fd_sc_hd__nand2b_4 instances:   8
   Class: sky130_fd_sc_hd__a311oi_1 instances:   3
-  Class: sky130_fd_sc_hd__diode_2 instances: 11811
+  Class: sky130_fd_sc_hd__diode_2 instances: 11805
   Class: sky130_fd_sc_hd__a311oi_2 instances:   2
   Class: sky130_fd_sc_hd__a311oi_4 instances:   9
   Class: sky130_fd_sc_hd__a221o_1 instances: 829
@@ -7709,7 +7709,7 @@ Circuit user_project_wrapper contains 126010 device instances.
   Class: sky130_fd_sc_hd__nor2_8 instances:  39
 Circuit contains 114527 nets, and 313 disconnected pins.
 Contents of circuit 2:  Circuit: 'user_project_wrapper'
-Circuit user_project_wrapper contains 126010 device instances.
+Circuit user_project_wrapper contains 126004 device instances.
   Class: sky130_fd_sc_hd__bufinv_16 instances: 172
   Class: sky130_fd_sc_hd__o2111ai_1 instances:   3
   Class: sky130_fd_sc_hd__o2111ai_2 instances:   3
@@ -7863,7 +7863,7 @@ Circuit user_project_wrapper contains 126010 device instances.
   Class: sky130_fd_sc_hd__nand2b_1 instances: 1037
   Class: sky130_fd_sc_hd__nand2b_2 instances:  55
   Class: sky130_fd_sc_hd__nand2b_4 instances:   8
-  Class: sky130_fd_sc_hd__diode_2 instances: 11811
+  Class: sky130_fd_sc_hd__diode_2 instances: 11805
   Class: sky130_fd_sc_hd__a311oi_1 instances:   3
   Class: sky130_fd_sc_hd__a311oi_2 instances:   2
   Class: sky130_fd_sc_hd__a311oi_4 instances:   9
@@ -7940,12 +7940,12 @@ Circuit user_project_wrapper contains 126010 device instances.
   Class: sky130_fd_sc_hd__nor2_8 instances:  39
 Circuit contains 114527 nets, and 313 disconnected pins.
 
-Circuit 1 contains 126010 devices, Circuit 2 contains 126010 devices.
+Circuit 1 contains 126004 devices, Circuit 2 contains 126004 devices.
 Circuit 1 contains 114527 nets,    Circuit 2 contains 114527 nets.
 
 
 Final result: 
 Circuits match uniquely.
 .
-Logging to file "/home/marcus/caravel_pdn_overhaul/openlane/user_project_wrapper/runs/25_11_18_15_22/68-netgen-lvs/reports/lvs.netgen.rpt" disabled
+Logging to file "/home/marcus/caravel_pdn_overhaul/openlane/user_project_wrapper/runs/25_11_19_11_53/68-netgen-lvs/reports/lvs.netgen.rpt" disabled
 LVS Done.

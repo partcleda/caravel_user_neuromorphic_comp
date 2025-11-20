@@ -496,6 +496,6 @@ Loading DRC CIF style.
 No errors found.
 [INFO] COUNT: 0
 [INFO] Should be divided by 3 or 4
-[INFO] DRC Checking DONE (/home/marcus/caravel_pdn_overhaul/openlane/user_project_wrapper/runs/25_11_18_15_22/62-magic-drc/reports/drc_violations.magic.rpt)
-[INFO] Saving mag view with DRC errors (/home/marcus/caravel_pdn_overhaul/openlane/user_project_wrapper/runs/25_11_18_15_22/62-magic-drc/views/user_project_wrapper.drc.mag)
+[INFO] DRC Checking DONE (/home/marcus/caravel_pdn_overhaul/openlane/user_project_wrapper/runs/25_11_19_11_53/62-magic-drc/reports/drc_violations.magic.rpt)
+[INFO] Saving mag view with DRC errors (/home/marcus/caravel_pdn_overhaul/openlane/user_project_wrapper/runs/25_11_19_11_53/62-magic-drc/views/user_project_wrapper.drc.mag)
 [INFO] Saved
