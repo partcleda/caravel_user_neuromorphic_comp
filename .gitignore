@@ -13,6 +13,11 @@
 /dependencies
 /mgmt_core_wrapper
 /logs
+
+# metadata on submission to ChipFoundry
+# contact ChipFoundry or Partcl, Inc. directly for more information
+/.cf
+
 # macOS Finder metadata
 .DS_Store
 **/.DS_Store
